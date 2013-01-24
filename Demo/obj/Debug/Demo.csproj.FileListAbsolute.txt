@@ -1,0 +1,14 @@
+E:\WebSite\Project\MyUtilities\Demo\bin\Demo.dll
+E:\WebSite\Project\MyUtilities\Demo\bin\Demo.pdb
+E:\WebSite\Project\MyUtilities\Demo\bin\MyUtilities.dll
+E:\WebSite\Project\MyUtilities\Demo\bin\MyUtilities.pdb
+E:\WebSite\Project\MyUtilities\Demo\obj\Debug\ResolveAssemblyReference.cache
+E:\WebSite\Project\MyUtilities\Demo\obj\Debug\Demo.dll
+E:\WebSite\Project\MyUtilities\Demo\obj\Debug\Demo.pdb
+E:\WebSite\Project\MyHelper\Demo\obj\Debug\ResolveAssemblyReference.cache
+E:\WebSite\Project\MyHelper\Demo\obj\Debug\Demo.pdb
+E:\WebSite\Project\MyHelper\Demo\bin\Demo.dll
+E:\WebSite\Project\MyHelper\Demo\bin\Demo.pdb
+E:\WebSite\Project\MyHelper\Demo\bin\MyUtilities.dll
+E:\WebSite\Project\MyHelper\Demo\bin\MyUtilities.pdb
+E:\WebSite\Project\MyHelper\Demo\obj\Debug\Demo.dll

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which
+         assemblies to include from solution and project documentation
+         sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40a12431-21f8-409c-89f9-08e0aff5cc44}</ProjectGuid>
+    <SHFBSchemaVersion>1.9.5.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual
+         Studio adds them anyway -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    <!-- SHFB properties -->
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>MyHelper4Web API</HtmlHelpName>
+    <Language>en-US</Language>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\MyHelper\bin\Release\MyHelper4Web.dll" />
+<DocumentationSource sourceFile="..\MyHelper\bin\Release\MyHelper4Web.xml" /></DocumentationSources>
+    <BuildAssemblerVerbosity>OnlyErrors</BuildAssemblerVerbosity>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <IndentHtml>False</IndentHtml>
+    <FrameworkVersion>.NET Framework 3.5</FrameworkVersion>
+    <KeepLogFile>False</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <CleanIntermediates>True</CleanIntermediates>
+    <SyntaxFilters>CSharp, VisualBasic, CPlusPlus, FSharp</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <PresentationStyle>VS2010</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>Guid</NamingMethod>
+    <HelpTitle>The Document of MyHelper4Web API</HelpTitle>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <VisibleItems>None</VisibleItems>
+    <ProjectSummary>常用 C# 帮助类集合 for WebForm 版</ProjectSummary>
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="MyHelper4Web" isDocumented="True">常用 C# 帮助类集合 for WebForm 版</NamespaceSummaryItem>
+    </NamespaceSummaries>
+    <HeaderText>通用 C# 操作类 （WebForm 版）</HeaderText>
+    <FeedbackEMailLinkText>提交反馈</FeedbackEMailLinkText>
+    <FeedbackEMailAddress>duluohua%40hotmail.com</FeedbackEMailAddress>
+    <CopyrightText>2012 Copyright Yang, Dennis</CopyrightText>
+    <CopyrightHref>http://www.cnblogs.com/flashbar/</CopyrightHref>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in
+       order for Visual Studio to perform the build.  The others are optional
+       common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+</Project>

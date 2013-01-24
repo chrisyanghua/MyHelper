@@ -1,0 +1,5 @@
+E:\WebSite\Project\MyHelper\MyHelper\obj\Release\ResolveAssemblyReference.cache
+E:\WebSite\Project\MyHelper\MyHelper\bin\Release\MyHelper.dll
+E:\WebSite\Project\MyHelper\MyHelper\bin\Release\MyHelper.pdb
+E:\WebSite\Project\MyHelper\MyHelper\obj\Release\MyHelper.dll
+E:\WebSite\Project\MyHelper\MyHelper\obj\Release\MyHelper.pdb

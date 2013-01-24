@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder" version="1.9.6.0" projectFile="D:\Projects\MyHelper\API\MyHelper API.shfbproj" started="2013/1/23 15:55:47">
+<buildStep step="Initializing">
+Finding tools...
+Found Sandcastle tools in &#39;C:\Program Files (x86)\Sandcastle\&#39;
+Searching for HTML Help 1 compiler...
+Found HTML Help 1 compiler in &#39;C:\Program Files (x86)\HTML Help Workshop\&#39;
+</buildStep>
+<buildStep step="ClearWorkFolder">
+Clearing working folder...
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: D:\Projects\MyHelper\MyHelper\bin\Release\MyHelper4Web.dll
+    Found assembly &#39;D:\Projects\MyHelper\MyHelper\bin\Release\MyHelper4Web.dll&#39;
+Source: D:\Projects\MyHelper\MyHelper\bin\Release\MyHelper4Web.xml
+
+Copying XML comments files
+    D:\Projects\MyHelper\MyHelper\bin\Release\MyHelper4Web.XML -&gt; D:\Projects\MyHelper\API\Help\Working\MyHelper4Web.XML
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, English (United States))...
+    Last step completed in 00:00:00.0570
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00.0050
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+  MRefBuilder (v2.7.2.0)
+  Copyright ? 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Loaded 1 assemblies for reflection and 0 dependency assemblies.
+  Info: Wrote information on 1 namespaces, 20 types, and 320 members
+  XslTransform (v2.7.2.0)
+  Copyright ? 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
+    Last step completed in 00:00:01.6502
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="ApplyVisibilityProperties">
+Applying visibility properties to reflection information file
+    2 attribute nodes removed
+    0 explicit interface implementations removed
+    0 local and base class EII elements removed
+    108 inherited member elements removed
+    15 protected members noted for removal
+    0 protected inherited framework members noted for removal
+    Removing previously noted unwanted APIs and elements
+    Last step completed in 00:00:00.0520
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+  XslTransform (v2.7.2.0)
+  Copyright ? 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\AddGuidFilenames.xsl&#39;.
+  XslTransform (v2.7.2.0)
+  Copyright ? 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
+    Last step completed in 00:00:01.1101
+</buildStep>
+<buildStep step="ModifyHelpTopicFilenames">
+Modifying help topic filenames in reflection information file
+    No changes required
+    Last step completed in 00:00:00.0140
+</buildStep>
+<buildStep step="CopyStandardContent">
+Copying standard help content...
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\1_404_bullet.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\1_404_bullet.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\2_404_bullet.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\2_404_bullet.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\alert_caution.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\alert_caution.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\alert_note.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\alert_note.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\alert_security.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\alert_security.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\CFW.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\CFW.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\close.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\close.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\favicon.ico -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\favicon.ico
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\footer_slice.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\footer_slice.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\info_icon.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\info_icon.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\note.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\note.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\online_icon.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\online_icon.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\open.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\open.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pencil.GIF -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pencil.GIF
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privclass.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privclass.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privdelegate.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privdelegate.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privenumeration.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privenumeration.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privevent.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privevent.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privextension.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privextension.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privfield.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privfield.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privinterface.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privinterface.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privmethod.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privmethod.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privproperty.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privproperty.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\privstructure.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\privstructure.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protclass.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protclass.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protdelegate.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protdelegate.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protenumeration.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protenumeration.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protevent.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protevent.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protextension.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protextension.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protfield.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protfield.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protinterface.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protinterface.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protmethod.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protmethod.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protoperator.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protoperator.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protproperty.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protproperty.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\protstructure.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\protstructure.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubclass.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubclass.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubdelegate.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubdelegate.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubenumeration.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubenumeration.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubevent.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubevent.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubextension.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubextension.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubfield.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubfield.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubinterface.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubinterface.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubmethod.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubmethod.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\puboperator.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\puboperator.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubproperty.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubproperty.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\pubstructure.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\pubstructure.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\search.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\search.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\search_bk.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\search_bk.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\security.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\security.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\slMobile.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\slMobile.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\static.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\static.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\tabLeftBG.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\tabLeftBG.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\tabRightBG.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\tabRightBG.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\ui_om_collapse.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\ui_om_collapse.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\ui_om_expand.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\ui_om_expand.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\icons\xna.gif -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\icons\xna.gif
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\scripts\branding.js -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\scripts\branding.js
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-cs-CZ.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-cs-CZ.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-de-DE.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-de-DE.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-en-US.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-en-US.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-es-ES.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-es-ES.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-fr-FR.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-fr-FR.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-it-IT.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-it-IT.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-ja-JP.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-ja-JP.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-ko-KR.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-ko-KR.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-pl-PL.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-pl-PL.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-pt-BR.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-pt-BR.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-ru-RU.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-ru-RU.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-tr-TR.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-tr-TR.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-zh-CN.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding-zh-TW.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\styles\branding.css -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\styles\branding.css
+Copying help branding...
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\branding\
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc -&gt; D:\Projects\MyHelper\API\Help\Working\branding
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/body.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\body.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/head.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\head.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/CodeSnippet.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\CodeSnippet.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-cs-CZ.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-cs-CZ.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-de-DE.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-de-DE.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-en-US.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-en-US.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-es-ES.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-es-ES.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-fr-FR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-fr-FR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-it-IT.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-it-IT.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-ja-JP.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-ja-JP.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-ko-KR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-ko-KR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-pl-PL.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-pl-PL.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-pt-BR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-pt-BR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-ru-RU.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-ru-RU.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-tr-TR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-tr-TR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-zh-CN.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-zh-CN.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/codesnippet-zh-TW.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\codesnippet-zh-TW.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/Identity.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\Identity.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/InstrumentedLink.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\InstrumentedLink.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-cs-CZ.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-cs-CZ.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-de-DE.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-de-DE.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-en-US.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-en-US.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-es-ES.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-es-ES.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-fr-FR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-fr-FR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-it-IT.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-it-IT.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-ja-JP.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-ja-JP.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-ko-KR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-ko-KR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-pl-PL.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-pl-PL.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-pt-BR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-pt-BR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-ru-RU.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-ru-RU.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-tr-TR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-tr-TR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-zh-CN.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-zh-CN.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/instrumentedlink-zh-TW.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\instrumentedlink-zh-TW.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/LanguageSpecificText.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\LanguageSpecificText.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-cs-CZ.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-cs-CZ.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-de-DE.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-de-DE.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-en-US.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-en-US.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-es-ES.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-es-ES.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-fr-FR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-fr-FR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-it-IT.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-it-IT.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-ja-JP.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-ja-JP.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-ko-KR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-ko-KR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-pl-PL.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-pl-PL.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-pt-BR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-pt-BR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-ru-RU.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-ru-RU.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-tr-TR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-tr-TR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-zh-CN.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-zh-CN.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/MultiViewTable-zh-TW.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\MultiViewTable-zh-TW.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-cs-CZ.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-cs-CZ.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-de-DE.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-de-DE.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-en-US.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-en-US.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-es-ES.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-es-ES.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-fr-FR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-fr-FR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-it-IT.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-it-IT.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-ja-JP.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-ja-JP.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-ko-KR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-ko-KR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-pl-PL.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-pl-PL.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-pt-BR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-pt-BR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-ru-RU.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-ru-RU.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-tr-TR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-tr-TR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-zh-CN.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-zh-CN.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/index-zh-TW.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\index-zh-TW.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-cs-CZ.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-cs-CZ.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-de-DE.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-de-DE.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-en-US.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-en-US.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-es-ES.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-es-ES.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-fr-FR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-fr-FR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-it-IT.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-it-IT.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-ja-JP.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-ja-JP.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-ko-KR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-ko-KR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-pl-PL.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-pl-PL.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-pt-BR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-pt-BR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-ru-RU.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-ru-RU.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-tr-TR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-tr-TR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-zh-CN.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-zh-CN.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/search-zh-TW.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\search-zh-TW.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-cs-CZ.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-cs-CZ.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-de-DE.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-de-DE.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-en-US.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-en-US.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-es-ES.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-es-ES.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-fr-FR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-fr-FR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-it-IT.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-it-IT.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-ja-JP.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-ja-JP.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-ko-KR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-ko-KR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-pl-PL.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-pl-PL.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-pt-BR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-pt-BR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-ru-RU.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-ru-RU.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-tr-TR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-tr-TR.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-zh-CN.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-zh-CN.xslt
+    C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding\dev10.mshc/toc-zh-TW.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\toc-zh-TW.xslt
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding -&gt; D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\branding\
+C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding -&gt; D:\Projects\MyHelper\API\Help\Working\branding
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding.xml -> D:\Projects\MyHelper\API\Help\Working\branding\branding.xml
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-cs-CZ.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-cs-CZ.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-de-DE.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-de-DE.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-en-US.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-en-US.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-es-ES.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-es-ES.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-fr-FR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-fr-FR.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-it-IT.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-it-IT.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-ja-JP.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-ja-JP.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-ko-KR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-ko-KR.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-pl-PL.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-pl-PL.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-pt-BR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-pt-BR.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-ru-RU.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-ru-RU.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-tr-TR.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-tr-TR.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-zh-CN.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-zh-CN.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\branding-zh-TW.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\branding-zh-TW.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-body.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\ps-body.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-head.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\ps-head.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-foot.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\ps-foot.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-collapsibleArea.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\ps-collapsibleArea.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-instrumentedLink.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\ps-instrumentedLink.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-languageSpecificText.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\ps-languageSpecificText.xslt
+    C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-codesnippet.xslt -> D:\Projects\MyHelper\API\Help\Working\branding\ps-codesnippet.xslt
+    Last step completed in 00:00:00.3160
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+No additional content to copy
+    Last step completed in 00:00:00.0010
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00.0010
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file...
+[c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+  XslTransform (v2.7.2.0)
+  Copyright ? 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\\ProductionTransforms\CreateVSToc.xsl&#39;.
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:00.2950
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    Last step completed in 00:00:00.0090
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+D:\Projects\MyHelper\API\Help\Working\sandcastle.config
+    Last step completed in 00:00:00.0360
+</buildStep>
+<buildStep step="BuildReferenceTopics">
+Building reference help topics...
+[c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+  BuildAssembler (v2.7.2.0)
+  Copyright ? 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Loading configuration...
+  Info: Processing topics...
+  Info: Processed 408 topics
+    Last step completed in 00:01:11.9902
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+    Last step completed in 00:00:00.0070
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for HTML Help 1 and/or website...
+[c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Sandcastle Help File Builder, version 1.9.6.0
+Copyright ? 2006-2012, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
+
+Processing Help 1 files in D:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1
+Processed 408 HTML files
+Sorting keywords and generating See Also indices
+Saving HTML Help 1 keyword index to D:\Projects\MyHelper\API\Help\Working\MyHelper4Web API.hhk
+Saving HTML Help 1 table of contents to D:\Projects\MyHelper\API\Help\Working\MyHelper4Web API.hhc
+    Last step completed in 00:00:02.9653
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContents">
+Generating HTML Help 1 table of contents file...
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="GenerateHelpFileIndex">
+Generating HTML Help 1 index file...
+    Last step completed in 00:00:00.0030
+</buildStep>
+<buildStep step="GenerateHelpProject">
+Generating HTML Help 1 project file...
+    Last step completed in 00:00:00.0090
+</buildStep>
+<buildStep step="CompilingHelpFile">
+Compiling HTML Help 1 file...
+[c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+  Microsoft HTML Help Compiler 4.74.8702
+  
+  
+  
+  Compiling d:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\MyHelper4Web API.chm
+  
+  
+  
+  
+  
+  Compile time: 0 minutes, 3 seconds
+  
+  410	Topics
+  
+  4,512	Local links
+  
+  3,433	Internet links
+  
+  0	Graphics
+  
+  
+  
+  
+  
+  Created d:\Projects\MyHelper\API\Help\Working\Output\HtmlHelp1\MyHelper4Web API.chm, 587,907 bytes
+  
+  Compression decreased file by 3,885,536 bytes.
+  
+    Last step completed in 00:00:03.9304
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00.1270
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 01/23/2013 03:57 下午.  Total time: 00:01:22.6723
+
+</buildStep>
+</shfbBuild>

@@ -1,0 +1,11 @@
+E:\WebSite\Project\MyHelper\MyHelper\bin\Release\MyHelper4Web.dll
+E:\WebSite\Project\MyHelper\MyHelper\bin\Release\MyHelper4Web.pdb
+E:\WebSite\Project\MyHelper\MyHelper\obj\Release\ResolveAssemblyReference.cache
+E:\WebSite\Project\MyHelper\MyHelper\obj\Release\MyHelper4Web.dll
+E:\WebSite\Project\MyHelper\MyHelper\obj\Release\MyHelper4Web.pdb
+D:\Projects\MyHelper\MyHelper\bin\Release\MyHelper4Web.dll
+D:\Projects\MyHelper\MyHelper\bin\Release\MyHelper4Web.pdb
+D:\Projects\MyHelper\MyHelper\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\MyHelper\MyHelper\obj\Release\MyHelper4Web.dll
+D:\Projects\MyHelper\MyHelper\obj\Release\MyHelper4Web.pdb
+D:\Projects\MyHelper\MyHelper\bin\Release\MyHelper4Web.XML

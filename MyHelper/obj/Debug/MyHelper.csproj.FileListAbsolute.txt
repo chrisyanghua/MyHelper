@@ -1,0 +1,10 @@
+E:\WebSite\Project\MyUtilities\MyUtilities\bin\Debug\MyUtilities.dll
+E:\WebSite\Project\MyUtilities\MyUtilities\bin\Debug\MyUtilities.pdb
+E:\WebSite\Project\MyUtilities\MyUtilities\obj\Debug\ResolveAssemblyReference.cache
+E:\WebSite\Project\MyUtilities\MyUtilities\obj\Debug\MyUtilities.dll
+E:\WebSite\Project\MyUtilities\MyUtilities\obj\Debug\MyUtilities.pdb
+E:\WebSite\Project\MyHelper\MyHelper\bin\Debug\MyUtilities.dll
+E:\WebSite\Project\MyHelper\MyHelper\bin\Debug\MyUtilities.pdb
+E:\WebSite\Project\MyHelper\MyHelper\obj\Debug\ResolveAssemblyReference.cache
+E:\WebSite\Project\MyHelper\MyHelper\obj\Debug\MyUtilities.dll
+E:\WebSite\Project\MyHelper\MyHelper\obj\Debug\MyUtilities.pdb

@@ -147,7 +147,60 @@ namespace MyHelper4Web
                 return;
             }
         }
+        
+        #endregion
+        #region add by frankie 201301291641
+         /// <summary> 
+    /// 读取XML返回经排序或筛选后的DataView
+    /// </summary>
+    /// <param name="strWhere">筛选条件，如:"name='kgdiwss'"</param>
+    /// <param name="strSort"> 排序条件，如:"Id desc"</param>
+    public DataView GetDataViewByXml(string strWhere, string strSort)
+    {
+        try
+        {
+            string XMLFile = this.XMLPath;
+            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + XMLFile;
+            DataSet ds = new DataSet();
+            ds.ReadXml(filename);
+            DataView dv = new DataView(ds.Tables[0]); //创建DataView来完成排序或筛选操作    
+            if (strSort != null)
+            {
+                dv.Sort = strSort; //对DataView中的记录进行排序
+            }
+            if (strWhere != null)
+            {
+                dv.RowFilter = strWhere; //对DataView中的记录进行筛选，找到我们想要的记录
+            }
+            return dv;
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
 
+    /// <summary>
+    /// 读取XML返回DataSet
+    /// </summary>
+    /// <param name="strXmlPath">XML文件相对路径</param>
+    public DataSet GetDataSetByXml(string strXmlPath)
+    {
+        try
+        {
+            DataSet ds = new DataSet();
+            ds.ReadXml(GetXmlFullPath(strXmlPath));
+            if (ds.Tables.Count > 0)
+            {
+                return ds;
+            }
+            return null;
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
         #endregion
 
     }

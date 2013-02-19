@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace MyHelper4Web
 {
@@ -146,15 +147,8 @@ namespace MyHelper4Web
         /// <returns>数字 一年中的第几周</returns> 
         public static int GetWeekofyear(DateTime dtime)
         {
-            int weeknum = 0;
-            DateTime tmpdate = DateTime.Parse(dtime.Year.ToString() + "-1" + "-1");
-            DayOfWeek firstweek = tmpdate.DayOfWeek;
-            //if(firstweek) 
-            for (int i = (int)firstweek + 1; i <= dtime.DayOfYear; i = i + 7)
-            {
-                weeknum = weeknum + 1;
-            }
-            return weeknum;
+            return CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(dtime, CalendarWeekRule.FirstDay,
+                                                                     DayOfWeek.Sunday);
         }
 
         #endregion

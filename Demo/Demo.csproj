@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DemoMyAppConfig.aspx" />
+    <Content Include="DemoMyDateTimeHelper.aspx" />
     <Content Include="DemoMyExcel.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -70,6 +71,13 @@
     </Compile>
     <Compile Include="DemoMyAppConfig.aspx.designer.cs">
       <DependentUpon>DemoMyAppConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DemoMyDateTimeHelper.aspx.cs">
+      <DependentUpon>DemoMyDateTimeHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DemoMyDateTimeHelper.aspx.designer.cs">
+      <DependentUpon>DemoMyDateTimeHelper.aspx</DependentUpon>
     </Compile>
     <Compile Include="DemoMyExcel.aspx.cs">
       <DependentUpon>DemoMyExcel.aspx</DependentUpon>

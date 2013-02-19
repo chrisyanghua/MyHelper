@@ -12,3 +12,10 @@ E:\WebSite\Project\MyHelper\Demo\bin\Demo.pdb
 E:\WebSite\Project\MyHelper\Demo\bin\MyUtilities.dll
 E:\WebSite\Project\MyHelper\Demo\bin\MyUtilities.pdb
 E:\WebSite\Project\MyHelper\Demo\obj\Debug\Demo.dll
+D:\Projects\MyHelper\Demo\bin\Demo.dll
+D:\Projects\MyHelper\Demo\bin\Demo.pdb
+D:\Projects\MyHelper\Demo\bin\MyHelper4Web.dll
+D:\Projects\MyHelper\Demo\bin\MyHelper4Web.pdb
+D:\Projects\MyHelper\Demo\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\MyHelper\Demo\obj\Debug\Demo.dll
+D:\Projects\MyHelper\Demo\obj\Debug\Demo.pdb

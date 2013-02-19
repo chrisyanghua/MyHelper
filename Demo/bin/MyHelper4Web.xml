@@ -244,6 +244,38 @@
             <param name="dtime">日期时间</param> 
             <returns>数字 一年中的第几周</returns> 
         </member>
+        <member name="T:MyHelper4Web.MyFtpHelper">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyFtpHelper.UploadFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            上传文件到服务器
+            </summary>
+            <param name="hostName">服务器地址，如：ftp://192.168.1.101</param>
+            <param name="fileName">上传的文件本地路径</param>
+            <param name="uploadDir">上传到服务器的目录，如:ftp://192.168.1.101/Test </param>
+            <param name="ftpUser">FTP的用户名</param>
+            <param name="ftpPassWord">FTP的密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFtpHelper.CreateDirection(System.String,System.String,System.String)">
+            <summary>
+            创建FTP目录，返回值是否创建成功
+            </summary>
+            <param name="ftpUri">FTP的目录</param>
+            <param name="ftpUser">FTP的用户名</param>
+            <param name="ftpPassWord">FTP的密码</param>
+        </member>
+        <member name="M:MyHelper4Web.MyFtpHelper.FtpIsExistsFile(System.String,System.String,System.String)">
+            <summary>
+            判断FTP上目录是否存在
+            </summary>
+            <param name="uri">FTP上的目录</param>
+            <param name="ftpUser">FTP的用户名</param>
+            <param name="ftpPassWord">FTP的密码</param>
+            <returns></returns>
+        </member>
         <member name="T:MyHelper4Web.MyKeyboardHelper">
             <summary>
             提供访问键盘当前状态的属性，

@@ -151,6 +151,16 @@ namespace MyHelper4Web
                                                                      DayOfWeek.Sunday);
         }
 
+        /// <summary> 
+        /// 取指定日期是一月中的第几天 
+        /// </summary> 
+        /// <param name="dtime">日期时间</param> 
+        /// <returns>数字 一月中的第几天</returns> 
+        public static int GetDayofmonth(DateTime dtime)
+        {
+            return CultureInfo.CurrentCulture.Calendar.GetDayOfMonth(dtime);
+        }
+
         #endregion
 
     }

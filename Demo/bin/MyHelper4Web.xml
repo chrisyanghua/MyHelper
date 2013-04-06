@@ -4,245 +4,211 @@
         <name>MyHelper4Web</name>
     </assembly>
     <members>
-        <member name="T:MyHelper4Web.MyExcelHelper">
+        <member name="T:MyHelper4Web.MyMD5Helper">
             <summary>
-            Excel 操作类
+            MD5 操作类
             </summary>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelConnectstring(System.String,System.Boolean,MyHelper4Web.MyExcelHelper.ExcelType)">
+        <member name="M:MyHelper4Web.MyMD5Helper.GetMD532(System.String)">
             <summary>
-            返回Excel 连接字符串   [IMEX=1]
+            获得32位的MD5加密
             </summary>
-            <param name="excelPath">Excel文件 绝对路径</param>
-            <param name="header">是否把第一行作为列名</param>
-            <param name="eType">Excel 版本 </param>
+            <param name="input">输入字符串</param>
             <returns>返回值</returns>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelConnectstring(System.String,System.Boolean,MyHelper4Web.MyExcelHelper.ExcelType,MyHelper4Web.MyExcelHelper.IMEXType)">
+        <member name="M:MyHelper4Web.MyMD5Helper.GetMD516(System.String)">
             <summary>
-            返回Excel 连接字符串
+            获得16位的MD5加密
             </summary>
-            <param name="excelPath">Excel文件 绝对路径</param>
-            <param name="header">是否把第一行作为列名</param>
-            <param name="eType">Excel 版本 </param>
-            <param name="imex">IMEX模式</param>
+            <param name="input">输入字符串</param>
             <returns>返回值</returns>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelTablesName(System.String,MyHelper4Web.MyExcelHelper.ExcelType)">
+        <member name="M:MyHelper4Web.MyMD5Helper.GetMD58(System.String)">
             <summary>
-            返回Excel工作表名
+            获得8位的MD5加密
             </summary>
-            <param name="excelPath">Excel文件 绝对路径</param>
-            <param name="eType">Excel 版本 </param>
+            <param name="input">输入字符串</param>
             <returns>返回值</returns>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelTablesName(System.String)">
+        <member name="M:MyHelper4Web.MyMD5Helper.GetMD54(System.String)">
             <summary>
-            返回Excel工作表名
+            获得4位的MD5加密
             </summary>
-            <param name="connectstring">excel连接字符串</param>
+            <param name="input">输入字符串</param>
             <returns>返回值</returns>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelTablesName(System.Data.OleDb.OleDbConnection)">
+        <member name="M:MyHelper4Web.MyMD5Helper.AddMD5Profix(System.String)">
             <summary>
-            返回Excel工作表名
+            添加MD5的前缀，便于检查有无篡改
             </summary>
-            <param name="connection">excel连接</param>
+            <param name="input">输入字符串</param>
             <returns>返回值</returns>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelFirstTableName(System.String,MyHelper4Web.MyExcelHelper.ExcelType)">
+        <member name="M:MyHelper4Web.MyMD5Helper.RemoveMD5Profix(System.String)">
             <summary>
-            返回Excel第一个工作表表名
+            移除MD5的前缀
             </summary>
-            <param name="excelPath">Excel文件 绝对路径</param>
-            <param name="eType">Excel 版本 </param>
+            <param name="input">输入字符串</param>
             <returns>返回值</returns>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelFirstTableName(System.String)">
+        <member name="M:MyHelper4Web.MyMD5Helper.ValidateValue(System.String)">
             <summary>
-            返回Excel第一个工作表表名
+            验证MD5前缀处理的字符串有无被篡改
             </summary>
-            <param name="connectstring">excel连接字符串</param>
+            <param name="input">输入字符串</param>
             <returns>返回值</returns>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelFirstTableName(System.Data.OleDb.OleDbConnection)">
+        <member name="M:MyHelper4Web.MyMD5Helper.AddMD5(System.String)">
             <summary>
-            返回Excel第一个工作表表名
+            对给定文件路径的文件加上标签
             </summary>
-            <param name="connection">excel连接</param>
+            <param name="path">要加密的文件的路径</param>
+            <returns>标签的值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyMD5Helper.CheckMD5(System.String)">
+            <summary>
+            对给定路径的文件进行验证
+            </summary>
+            <param name="path">要加密的文件的路径</param>
+            <returns>是否加了标签或是否标签值与内容值一致</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyMD5Helper.MD5Buffer(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            计算文件的MD5值
+            </summary>
+            <param name="md5File">MD5签名文件字符数组</param>
+            <param name="index">计算起始位置</param>
+            <param name="count">计算终止位置</param>
+            <returns>计算结果</returns>
+        </member>
+        <member name="T:MyHelper4Web.MyFileHelper">
+            <summary>
+            文件操作类
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.DeleteFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="fileFullPath">文件全路径</param>
+            <returns>bool 是否删除成功</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.GetFileName(System.String)">
+            <summary>
+            根据传来的文件全路径，获取文件名称部分默认包括扩展名
+            </summary>
+            <param name="fileFullPath">文件全路径</param>
+            <returns>string 文件名称</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.GetFileName(System.String,System.Boolean)">
+            <summary>
+            根据传来的文件全路径，获取文件名称部分
+            </summary>
+            <param name="fileFullPath">文件全路径</param>
+            <param name="includeExtension">是否包括文件扩展名</param>
+            <returns>string 文件名称</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.GetNewFileFullName(System.String)">
+            <summary>
+            根据传来的文件全路径，获取新的文件名称全路径,一般用作临时保存用
+            </summary>
+            <param name="fileFullPath">文件全路径</param>
+            <returns>string 新的文件全路径名称</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.GetFileExtension(System.String)">
+            <summary>
+            根据传来的文件全路径，获取文件扩展名不包括“.”，如“doc”
+            </summary>
+            <param name="fileFullPath">文件全路径</param>
+            <returns>string 文件扩展名</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.OpenFile(System.String)">
+            <summary>
+            根据传来的文件全路径，外部打开文件，默认用系统注册类型关联软件打开
+            </summary>
+            <param name="fileFullPath">文件全路径</param>
+            <returns>bool 文件名称</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.GetFileSize(System.String)">
+            <summary>
+            根据传来的文件全路径，得到文件大小，规范文件大小称呼，如1ＧＢ以上，单位用ＧＢ，１ＭＢ以上，单位用ＭＢ，１ＭＢ以下，单位用ＫＢ
+            </summary>
+            <param name="fileFullPath">文件全路径</param>
+            <returns>bool 文件大小</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.FileToStreamByte(System.String)">
+            <summary>
+            文件转换成二进制，返回二进制数组Byte[]
+            </summary>
+            <param name="fileFullPath">文件全路径</param>
+            <returns>byte[] 包含文件流的二进制数组</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.ByteStreamToFile(System.String,System.Byte[])">
+            <summary>
+            二进制数组Byte[]生成文件
+            </summary>
+            <param name="createFileFullPath">要生成的文件全路径</param>
+            <param name="streamByte">要生成文件的二进制 Byte 数组</param>
+            <returns>bool 是否生成成功</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.ByteStreamToFile(System.String,System.Byte[],System.Boolean)">
+            <summary>
+            二进制数组Byte[]生成文件，并验证文件是否存在，存在则先删除
+            </summary>
+            <param name="createFileFullPath">要生成的文件全路径</param>
+            <param name="streamByte">要生成文件的二进制 Byte 数组</param>
+            <param name="fileExistsDelete">同路径文件存在是否先删除</param>
+            <returns>bool 是否生成成功</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.ReadAndWriteFile(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            读写文件，并进行匹配文字替换
+            </summary>
+            <param name="pathRead">读取路径</param>
+            <param name="pathWrite">写入路径</param>
+            <param name="replaceStrings">替换字典</param>
+        </member>
+        <member name="M:MyHelper4Web.MyFileHelper.ReadFile(System.String)">
+            <summary>
+            读取文件
+            </summary>
+            <param name="filePath">文件路径</param>
             <returns>返回值</returns>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.GetColumnsList(System.String,MyHelper4Web.MyExcelHelper.ExcelType,System.String)">
+        <member name="M:MyHelper4Web.MyFileHelper.WriteFile(System.String,System.String)">
             <summary>
-            获取Excel文件中指定工作表的列
+            写入文件
             </summary>
-            <param name="excelPath">Excel文件 绝对路径</param>
-            <param name="eType">ExcelType</param>
-            <param name="table">名称 excel table  例如：Sheet1$</param>
-            <returns>返回值</returns>
+            <param name="pathWrite">写入路径</param>
+            <param name="content">内容</param>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.ExcelToDataSet(System.String,System.String,System.Boolean,MyHelper4Web.MyExcelHelper.ExcelType)">
+        <member name="M:MyHelper4Web.MyFileHelper.ReadAndAppendFile(System.String,System.String)">
             <summary>
-            EXCEL导入DataSet
+            读取并附加文本
             </summary>
-            <param name="excelPath">Excel文件 绝对路径</param>
-            <param name="table">名称 excel table  例如：Sheet1$ </param>
-            <param name="header">是否把第一行作为列名</param>
-            <param name="eType">Excel 版本 </param>
-            <returns>返回Excel相应工作表中的数据 DataSet   [table不存在时返回空的DataSet]</returns>
+            <param name="filePath">文件路径</param>
+            <param name="content">内容</param>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.IsExistExcelTableName(System.Data.OleDb.OleDbConnection,System.String)">
+        <member name="M:MyHelper4Web.MyFileHelper.CopyFile(System.String,System.String)">
             <summary>
-            判断工作表名是否存在
+            复制文件
             </summary>
-            <param name="connection">excel连接</param>
-            <param name="table">名称 excel table  例如：Sheet1$</param>
-            <returns>返回值</returns>
+            <param name="sources">源文件</param>
+            <param name="dest">目标文件</param>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.ExcelToDataSet(System.String,System.String)">
+        <member name="M:MyHelper4Web.MyFileHelper.MoveFile(System.String,System.String)">
             <summary>
-            EXCEL导入DataSet
+            复制文件
             </summary>
-            <param name="connectstring">excel连接字符串</param>
-            <param name="table">名称 excel table  例如：Sheet1$ </param>
-            <returns>返回Excel相应工作表中的数据 DataSet   [table不存在时返回空的DataSet]</returns>
+            <param name="sources">源文件</param>
+            <param name="dest">目标文件</param>
         </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.ExcelToDataSet(System.String,System.Boolean,MyHelper4Web.MyExcelHelper.ExcelType)">
+        <member name="M:MyHelper4Web.MyFileHelper.IsExistFile(System.String)">
             <summary>
-            EXCEL所有工作表导入DataSet
+            检测指定文件是否存在,如果存在则返回true。
             </summary>
-            <param name="excelPath">Excel文件 绝对路径</param>
-            <param name="header">是否把第一行作为列名</param>
-            <param name="eType">Excel 版本 </param>
-            <returns>返回Excel第一个工作表中的数据 DataSet </returns>
-        </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.ExcelToDataSet(System.String)">
-            <summary>
-            EXCEL所有工作表导入DataSet
-            </summary>
-            <param name="connectstring">excel连接字符串</param>
-            <returns>返回Excel第一个工作表中的数据 DataSet </returns>
-        </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.DataSetToExcel(System.Data.DataSet,System.String)">
-            <summary>
-            把一个数据集中的数据导出到Excel文件中(XML格式操作)
-            </summary>
-            <param name="source">DataSet数据</param>
-            <param name="fileName">保存的Excel文件名</param>
-        </member>
-        <member name="M:MyHelper4Web.MyExcelHelper.DataSetToExcel(System.Data.DataTable,System.String)">
-            <summary>
-            将DataTable导出为Excel(OleDb 方式操作）
-            </summary>
-            <param name="dataTable">表</param>
-            <param name="fileName">导出默认文件名</param>
-        </member>
-        <member name="T:MyHelper4Web.MyExcelHelper.ExcelType">
-            <summary>
-            Excel 版本
-            </summary>
-        </member>
-        <member name="T:MyHelper4Web.MyExcelHelper.IMEXType">
-            <summary>
-            IMEX 三种模式。
-            IMEX是用来告诉驱动程序使用Excel文件的模式，其值有0、1、2三种，分别代表导出、导入、混合模式。
-            </summary>
-        </member>
-        <member name="T:MyHelper4Web.MyDateTimeHelper">
-            <summary>
-            时间操作类
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetTheDay(System.Nullable{System.Int32},System.DateTime)">
-            <summary>
-            哪天
-            </summary>
-            <param name="days">7天前:-7 7天后:+7</param>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetSunday(System.Nullable{System.Int32},System.DateTime)">
-            <summary>
-            周日
-            </summary>
-            <param name="weeks">上周-1 下周+1 本周0</param>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetSaturday(System.Nullable{System.Int32},System.DateTime)">
-            <summary>
-            周六
-            </summary>
-            <param name="weeks">上周-1 下周+1 本周0</param>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetFirstDayOfMonth(System.Nullable{System.Int32},System.DateTime)">
-            <summary>
-            月第一天
-            </summary>
-            <param name="months">上月-1 本月0 下月1</param>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetLastDayOfMonth(System.Nullable{System.Int32},System.DateTime)">
-            <summary>
-            月最后一天
-            </summary>
-            <param name="months">上月0 本月1 下月2</param>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetFirstDayOfYear(System.DateTime)">
-            <summary>
-            年度第一天
-            </summary>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetLastDayOfYear(System.DateTime)">
-            <summary>
-            年度最后一天
-            </summary>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetFirstDayOfQuarter(System.Nullable{System.Int32},System.DateTime)">
-            <summary>
-            季度第一天
-            </summary>
-            <param name="quarters">上季度-1 下季度+1</param>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetLastDayOfQuarter(System.Nullable{System.Int32},System.DateTime)">
-            <summary>
-            季度最后一天
-            </summary>
-            <param name="quarters">上季度0 本季度1 下季度2</param>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetDayOfWeekCN(System.DateTime)">
-            <summary>
-            中文星期
-            </summary>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetDayOfWeekNum(System.DateTime)">
-            <summary>
-            获取星期数字形式,周一开始
-            </summary>
-            <param name="dateTime">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDateTimeHelper.GetWeekofyear(System.DateTime)">
-            <summary> 
-            取指定日期是一年中的第几周 
-            </summary> 
-            <param name="dtime">日期时间</param> 
-            <returns>数字 一年中的第几周</returns> 
+            <param name="filePath">文件的绝对路径</param>
+            <returns>bool 是否存在文件</returns>
         </member>
         <member name="T:MyHelper4Web.MyFtpHelper">
             <summary>
@@ -274,116 +240,6 @@
             <param name="uri">FTP上的目录</param>
             <param name="ftpUser">FTP的用户名</param>
             <param name="ftpPassWord">FTP的密码</param>
-            <returns></returns>
-        </member>
-        <member name="T:MyHelper4Web.MyKeyboardHelper">
-            <summary>
-            提供访问键盘当前状态的属性，
-            如什么键当前按下，提供了一种方法，以发送击键到活动窗口。
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyKeyboardHelper.SendKeys(System.String)">
-            <summary>发送一个或多个击键到活动窗口，如果在键盘上输入。</summary>
-            <param name="keys">一个字符串，定义发送键。</param>
-        </member>
-        <member name="M:MyHelper4Web.MyKeyboardHelper.SendKeys(System.String,System.Boolean)">
-            <summary>发送一个或多个击键到活动窗口，如果在键盘上输入。</summary>
-            <param name="keys">一个字符串，定义发送键。</param>
-            <param name="wait">可选的。一个布尔值，指定是否等待的应用程序继续之前得到处理的击键。默认为true。</param>
-            <filterpriority>1</filterpriority>
-            <PermissionSet><IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" /><IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" /><IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" /></PermissionSet>
-        </member>
-        <member name="P:MyHelper4Web.MyKeyboardHelper.AltKeyDown">
-            <summary>获取一个布尔值，表示如果ALT键是向下。</summary>
-            <returns>一个布尔值：如果ALT键，否则为false。</returns>
-        </member>
-        <member name="P:MyHelper4Web.MyKeyboardHelper.CapsLock">
-            <summary>获取一个布尔值，指示，如果已开启CAPS LOCK键。 </summary>
-            <returns>一个布尔值：如果已开启CAPS LOCK键，则为true，否则为false。</returns>
-            <filterpriority>1</filterpriority>
-        </member>
-        <member name="P:MyHelper4Web.MyKeyboardHelper.CtrlKeyDown">
-            <summary>获取一个布尔值，表示如果CTRL键是向下。</summary>
-            <returns>一个布尔值。真正如果CTRL键，否则为false。</returns>
-            <filterpriority>1</filterpriority>
-        </member>
-        <member name="P:MyHelper4Web.MyKeyboardHelper.NumLock">
-            <summary>获取一个布尔值，表示如果NUM LOCK键是。</summary>
-            <returns>一个布尔值。true，如果数字锁定，否则为false。</returns>
-            <filterpriority>1</filterpriority>
-        </member>
-        <member name="P:MyHelper4Web.MyKeyboardHelper.ScrollLock">
-            <summary>获取一个布尔值，指示是否SCROLL LOCK键是。 </summary>
-            <returns>一个布尔值。True如果滚动锁被，否则为false。</returns>
-            <filterpriority>1</filterpriority>
-        </member>
-        <member name="P:MyHelper4Web.MyKeyboardHelper.ShiftKeyDown">
-            <summary>获取一个布尔值，表示如果SHIFT键是向下。</summary>
-            <returns>一个布尔值。真正如果SHIFT键是向下，否则为false。</returns>
-            <filterpriority>1</filterpriority>
-        </member>
-        <member name="T:MyHelper4Web.NativeMethodsTemp">
-            <summary>
-            从 .Net 2.0 的 System.Windows.Forms.Dll 库提取
-            版权所有：微软公司
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.UnsafeNativeMethods.GetKeyState(System.Int32)">
-            <summary>
-            retrieves the status of the specified virtual key
-            </summary>
-            <param name="keyCode">Specifies a virtual key</param>
-            <returns>
-            The return value specifies the status of the specified virtual key, as follows: 
-             If the high-order bit is 1, the key is down; otherwise, it is up.
-             If the low-order bit is 1, the key is toggled. A key, such as the CAPS LOCK key, 
-             is toggled if it is turned on. The key is off and untoggled if the low-order bit is 0.
-             A toggle key's indicator light (if any) on the keyboard will be on when the key is
-             toggled, and off when the key is untoggled.
-            </returns>
-        </member>
-        <member name="T:MyHelper4Web.MyXmlHelper">
-            <summary>
-            XML 文件操作类
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyXmlHelper.Read(System.String,System.String,System.String)">
-            <summary>
-            读取数据
-            </summary>
-            <param name="path">路径</param>
-            <param name="node">节点</param>
-            <param name="attribute">属性名，非空时返回该属性值，否则返回串联值</param>
-            <returns>string</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyXmlHelper.Insert(System.String,System.String,System.String,System.String,System.String)">
-            <summary>
-            插入数据
-            </summary>
-            <param name="path">路径</param>
-            <param name="node">节点</param>
-            <param name="element">元素名，非空时插入新元素，否则在该元素中插入属性</param>
-            <param name="attribute">属性名，非空时插入该元素属性值，否则插入元素值</param>
-            <param name="value">值</param>
-            <returns></returns>
-        </member>
-        <member name="M:MyHelper4Web.MyXmlHelper.Update(System.String,System.String,System.String,System.String)">
-            <summary>
-            修改数据
-            </summary>
-            <param name="path">路径</param>
-            <param name="node">节点</param>
-            <param name="attribute">属性名，非空时修改该节点属性值，否则修改节点值</param>
-            <param name="value">值</param>
-            <returns></returns>
-        </member>
-        <member name="M:MyHelper4Web.MyXmlHelper.Delete(System.String,System.String,System.String)">
-            <summary>
-            删除数据
-            </summary>
-            <param name="path">路径</param>
-            <param name="node">节点</param>
-            <param name="attribute">属性名，非空时删除该节点属性值，否则删除节点值</param>
             <returns></returns>
         </member>
         <member name="T:MyHelper4Web.MyPinYinHelper">
@@ -445,601 +301,49 @@
             设置或获取包含例外词组读音的键/值对的组合
             </summary>
         </member>
-        <member name="T:MyHelper4Web.MyValidateHelper">
+        <member name="T:MyHelper4Web.MyXmlHelper">
             <summary>
-            常用验证操作类
+            XML 文件操作类
             </summary>
         </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.GetStringLength(System.String)">
+        <member name="M:MyHelper4Web.MyXmlHelper.Read(System.String,System.String,System.String)">
             <summary>
-            返回字符串真实长度, 1个汉字长度为2
+            读取数据
             </summary>
-            <param name="stringValue">字符串</param>
-            <returns>字符长度</returns>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时返回该属性值，否则返回串联值</param>
+            <returns>string</returns>
         </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidUserName(System.String)">
+        <member name="M:MyHelper4Web.MyXmlHelper.Insert(System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            检测用户名格式是否有效
+            插入数据
             </summary>
-            <param name="userName">用户名</param>
-            <returns>返回值</returns>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="element">元素名，非空时插入新元素，否则在该元素中插入属性</param>
+            <param name="attribute">属性名，非空时插入该元素属性值，否则插入元素值</param>
+            <param name="value">值</param>
+            <returns></returns>
         </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidPassword(System.String)">
+        <member name="M:MyHelper4Web.MyXmlHelper.Update(System.String,System.String,System.String,System.String)">
             <summary>
-            密码有效性
+            修改数据
             </summary>
-            <param name="password">密码</param>
-            <returns>返回值</returns>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时修改该节点属性值，否则修改节点值</param>
+            <param name="value">值</param>
+            <returns></returns>
         </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidInt(System.String)">
+        <member name="M:MyHelper4Web.MyXmlHelper.Delete(System.String,System.String,System.String)">
             <summary>
-            int有效性
+            删除数据
             </summary>
-            <param name="val">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsNumber(System.String)">
-            <summary>
-            是否数字字符串
-            </summary>
-            <param name="inputData">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsNumberSign(System.String)">
-            <summary>
-            是否数字字符串 可带正负号
-            </summary>
-            <param name="inputData">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsDecimal(System.String)">
-            <summary>
-            是否是浮点数
-            </summary>
-            <param name="inputData">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsDecimalSign(System.String)">
-            <summary>
-            是否是浮点数 可带正负号
-            </summary>
-            <param name="inputData">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsHasCHZN(System.String)">
-            <summary>
-            检测是否有中文字符
-            </summary>
-            <param name="inputData">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.GetCHZNLength(System.String)">
-            <summary> 
-            检测含有中文字符串的实际长度 
-            </summary>
-            <param name="inputData">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsIdCard(System.String)">
-            <summary>
-            验证身份证是否合法  15 和  18位两种
-            </summary>
-            <param name="idCard">要验证的身份证</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsEmail(System.String)">
-            <summary>
-            是否是邮件地址
-            </summary>
-            <param name="inputData">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidZip(System.String)">
-            <summary>
-            邮编有效性
-            </summary>
-            <param name="zip">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidPhone(System.String)">
-            <summary>
-            固定电话有效性
-            </summary>
-            <param name="phone">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidMobile(System.String)">
-            <summary>
-            手机有效性
-            </summary>
-            <param name="mobile">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidPhoneAndMobile(System.String)">
-            <summary>
-            电话有效性（固话和手机 ）
-            </summary>
-            <param name="number">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidURL(System.String)">
-            <summary>
-            Url有效性
-            </summary>
-            <param name="url">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidIP(System.String)">
-            <summary>
-            IP有效性
-            </summary>
-            <param name="ip">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsValidDomain(System.String)">
-            <summary>
-            domain 有效性
-            </summary>
-            <param name="host">域名</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsBase64String(System.String)">
-            <summary>
-            判断是否为base64字符串
-            </summary>
-            <param name="str">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsGuid(System.String)">
-            <summary>
-            验证字符串是否是GUID
-            </summary>
-            <param name="guid">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsDate(System.String)">
-            <summary>
-            判断输入的字符是否为日期
-            </summary>
-            <param name="strValue">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.IsDateHourMinute(System.String)">
-            <summary>
-            判断输入的字符是否为日期,如2004-07-12 14:25|||1900-01-01 00:00|||9999-12-31 23:59
-            </summary>
-            <param name="strValue">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.CheckMathLength(System.String,System.Int32)">
-            <summary>
-            检查字符串最大长度，返回指定长度的串
-            </summary>
-            <param name="inputData">输入字符串</param>
-            <param name="maxLength">最大长度</param>
-            <returns>返回值</returns>			
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.Encode(System.String)">
-            <summary>
-            转换成 HTML code
-            </summary>
-            <param name="str">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyValidateHelper.Decode(System.String)">
-             <summary>
-            解析html成 普通文本
-             </summary>
-             <param name="str">输入字符串</param>
-             <returns>返回值</returns>
-        </member>
-        <member name="T:MyHelper4Web.MyStringHelper">
-            <summary>
-            字符串操作类
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.IsEmpty(System.String)">
-            <summary>
-            检查字符串是否为空
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.CheckValidity(System.String)">
-            <summary>
-            检查字符串中是否包含非法字符
-            </summary>
-            <param name="s">单字符</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.TransformPrice(System.Double)">
-            <summary>
-            把价格精确至小数点两位
-            </summary>
-            <param name="dPrice">价格</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GetLength(System.String)">
-            <summary> 
-            检测含有中文字符串的实际长度 
-            </summary> 
-            <param name="str">字符串</param> 
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GetLetter(System.String,System.Int32,System.Boolean)">
-            <summary>
-            截取长度,num是英文字母的总数，一个中文算两个英文
-            </summary>
-            <param name="str">字符串</param>
-            <param name="iNum">英文字母的总数</param>
-            <param name="bAddDot">是否计算标点</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GetDateString(System.DateTime)">
-            <summary>
-            获取日期字符串
-            </summary>
-            <param name="dt">日期时间</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GetStrByLast(System.String,System.String)">
-            <summary>
-            根据指定字符，截取相应字符串
-            </summary>
-            <param name="sOrg">源字符串</param>
-            <param name="sLast">指定字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GetPreStrByLast(System.String,System.String)">
-            <summary>
-            根据指定字符，截取相应字符串
-            </summary>
-            <param name="sOrg">源字符串</param>
-            <param name="sLast">指定字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.RemoveEndWith(System.String,System.String)">
-            <summary>
-            根据指定字符，截取相应字符串
-            </summary>
-            <param name="sOrg">源字符串</param>
-            <param name="sEnd">终止字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.ClearTag(System.String)">
-            <summary>
-            清除HTML标记
-            </summary>
-            <param name="sHtml">HTML标记</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.ClearTag(System.String,System.String)">
-            <summary>
-            根据正则清除HTML标记
-            </summary>
-            <param name="sHtml">HTML标记</param>
-            <param name="sRegex">正则</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.ConvertToJS(System.String)">
-            <summary>
-            转化成JS
-            </summary>
-            <param name="sHtml">HTML标记</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.ReplaceNbsp(System.String)">
-            <summary>
-            替换空格
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.StringToHtml(System.String)">
-            <summary>
-            字符串转HTML
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.AcquireAssignString(System.String,System.Int32)">
-            <summary>
-            截取长度并转换为HTML
-            </summary>
-            <param name="str">字符串</param>
-            <param name="num">长度</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.TranslateToHtmlString(System.String,System.Int32)">
-            <summary>
-            此方法与AcquireAssignString的功能已经一样，为了不报错，故保留此方法
-            </summary>
-            <param name="str">字符串</param>
-            <param name="num">长度</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.DelHtmlString(System.String)">
-            <summary>
-            删除所有的html标记 
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.DelTag(System.String,System.String,System.Boolean)">
-            <summary>
-            删除字符串中的特定标记 
-            </summary>
-            <param name="str">字符串</param>
-            <param name="tag">标签</param>
-            <param name="isContent">是否清除内容 </param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.DelTagArray(System.String,System.String,System.Boolean)">
-            <summary>
-            删除字符串中的一组标记 
-            </summary>
-            <param name="str">字符串</param>
-            <param name="tagA">标签</param>
-            <param name="isContent">是否清除内容 </param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.SetVersionFormat(System.String)">
-            <summary>
-            格式化为版本号字符串
-            </summary>
-            <param name="sVersion">版本号</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.AddZero(System.Int32,System.Int32)">
-            <summary>
-            在前面补0
-            </summary>
-            <param name="sheep">数字</param>
-            <param name="length">补0长度</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.AddZero(System.String,System.Int32)">
-            <summary>
-            在前面补0
-            </summary>
-            <param name="sheep">数字</param>
-            <param name="length">补0长度</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GetUniqueString">
-            <summary>
-            简介：获得唯一的字符串
-            </summary>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GetCleanJsString(System.String)">
-            <summary>
-            获得干净,无非法字符的字符串
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GetCleanJsString2(System.String)">
-            <summary>
-            获得干净,无非法字符的字符串
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.StringToUnicode(System.String)">
-            <summary>
-            将原始字串转换为unicode,格式为\u.\u.
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.UnicodeToString(System.String)">
-            <summary>
-            将Unicode字串\u.\u.格式字串转换为原始字符串
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GB2Unicode(System.String)">
-            <summary>
-            GB2312转换成unicode编码 
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.GetByte(System.Char)">
-            <summary>
-            得到单个字符的值
-            </summary>
-            <param name="ch"></param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.ConvertSingle(System.String)">
-            <summary>
-            转换一个字符，输入如"Π"中的"03a0"
-            </summary>
-            <param name="unicodeSingle">unicode字符</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.UtoGB(System.String)">
-            <summary>
-            unicode编码转换成GB2312汉字 
-            </summary>
-            <param name="str">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyStringHelper.Convert2Hex(System.String)">
-            <summary>
-            字符串转成Hex
-            </summary>
-            <param name="pstr">字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="T:MyHelper4Web.MyEnumHelper">
-            <summary>
-            枚举操作类
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.GetDescription(System.Type,System.Object)">
-            <summary>
-            返回指定枚举类型的指定值的描述
-            </summary>
-            <param name="t">枚举类型</param>
-            <param name="v">枚举值</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.GetStatus(System.Type)">
-            <summary>
-            返回指定枚举类型的所有枚举项
-            </summary>
-            <param name="t">枚举类型</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.GetInstance``1(System.String)">
-            <summary>
-            通过字符串获取枚举成员实例
-            </summary>
-            <typeparam name="T">枚举名,比如Enum1</typeparam>
-            <param name="member">枚举成员的常量名或常量值,
-            范例:Enum1枚举有两个成员A=0,B=1,则传入"A"或"0"获取 Enum1.A 枚举类型</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberKeyValue``1">
-            <summary>
-            获取枚举成员名称和成员值的键值对集合
-            </summary>
-            <typeparam name="T">枚举名,比如Enum1</typeparam>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberNames``1">
-            <summary>
-            获取枚举所有成员名称
-            </summary>
-            <typeparam name="T">枚举名,比如Enum1</typeparam>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberName``1(System.Object)">
-            <summary>
-            获取枚举成员的名称
-            </summary>
-            <typeparam name="T">枚举名,比如Enum1</typeparam>
-            <param name="member">枚举成员实例或成员值,
-            范例:Enum1枚举有两个成员A=0,B=1,则传入Enum1.A或0,获取成员名称"A"</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberValues``1">
-            <summary>
-            获取枚举所有成员值
-            </summary>
-            <typeparam name="T">枚举名,比如Enum1</typeparam>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberValue``1(System.String)">
-            <summary>
-            获取枚举成员的值
-            </summary>
-            <typeparam name="T">枚举名,比如Enum1</typeparam>
-            <param name="memberName">枚举成员的常量名,
-            范例:Enum1枚举有两个成员A=0,B=1,则传入"A"获取0</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.GetUnderlyingType(System.Type)">
-            <summary>
-            获取枚举的基础类型
-            </summary>
-            <param name="enumType">枚举类型</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyEnumHelper.IsDefined``1(System.String)">
-            <summary>
-            检测枚举是否包含指定成员
-            </summary>
-            <typeparam name="T">枚举名,比如Enum1</typeparam>
-            <param name="member">枚举成员名或成员值</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="T:MyHelper4Web.MyDataTableHelper`1">
-            <summary>
-            DataTable帮助类
-            </summary>
-            <typeparam name="T">泛类</typeparam>
-        </member>
-        <member name="M:MyHelper4Web.MyDataTableHelper`1.GetInnerDataTable(System.Data.DataTable,System.Data.DataTable)">
-            <summary>
-            连接两个具有相同数据结构的DataTable,返回DataTable
-            </summary>
-            <param name="table1">表1</param>
-            <param name="table2">表2</param>
-            <returns>返回表</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDataTableHelper`1.WriteDataSetToXml(System.Data.DataSet,System.String)">
-            <summary>
-            将数据集写入xml文件
-            </summary>
-            <param name="dataset">数据集</param>
-            <param name="filename">XML文件名</param>
-            <returns>是否成功</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDataTableHelper`1.GetSelectDataTable(System.Data.DataTable,System.String)">
-            <summary>
-            查询DataTable中的数据
-            </summary>
-            <param name="table">要查询的datatable</param>
-            <param name="comText">查询条件</param>
-            <returns>数据列集合</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDataTableHelper`1.ToDataTable(System.Collections.Generic.List{`0})">
-            <summary>
-            实体数组转DataTable
-            </summary>
-            <typeparam name="T">泛类型</typeparam>
-            <param name="entitys">泛类对象</param>
-            <returns>DataTable</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDataTableHelper`1.DtToList(System.Data.DataTable)">
-            <summary>
-            DataTable转实体数组
-            </summary>
-            <param name="dt">数据表</param>
-            <returns>泛类列表</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDataTableHelper`1.EnumToDataTable(System.Type,System.String,System.String)">
-            <summary>
-            枚举转DataTable
-            </summary>
-            <param name="enumType">类型</param>
-            <param name="key">索引</param>
-            <param name="val">值</param>
-            <returns>DataTable</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDataTableHelper`1.CreateTable(System.Collections.Generic.List{System.String})">
-            <summary>
-            根据nameList里面的字段创建一个表格,返回该表格的DataTable
-            </summary>
-            <param name="nameList">包含字段信息的列表</param>
-            <returns>DataTable</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDataTableHelper`1.CreateTable(System.String)">
-            <summary>
-            通过字符列表创建表字段，字段格式可以是：
-            1) a,b,c,d,e
-            2) a|int,b|string,c|bool,d|decimal
-            </summary>
-            <param name="nameString">表名</param>
-            <returns>数据表</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDataTableHelper`1.SortedTable(System.Data.DataTable,System.String[])">
-            <summary>
-            排序表的视图
-            </summary>
-            <param name="dt">数据表</param>
-            <param name="sorts">排序字段</param>
-            <returns>排序后的表</returns>
-        </member>
-        <member name="P:MyHelper4Web.MyDataTableHelper`1.ExceptionMessage">
-            <summary>
-            设置或取得异常信息
-            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时删除该节点属性值，否则删除节点值</param>
+            <returns></returns>
         </member>
         <member name="T:MyHelper4Web.MyFileDialogHelper">
             <summary>
@@ -1301,151 +605,6 @@
             <param name="color">颜色值</param>
             <returns>返回值</returns>
         </member>
-        <member name="T:MyHelper4Web.MyDirHelper">
-            <summary>
-            文件夹有关的操作类
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetDirs(System.String)">
-            <summary>
-            获取指定目录中所有子目录列表,若要搜索嵌套的子目录列表,请使用重载方法.
-            </summary>
-            <param name="directoryPath">指定目录的绝对路径</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.CreateDir(System.String)">
-            <summary>
-            创建文件夹
-            </summary>
-            <param name="destDirectory">指定目录的绝对路径</param>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.CopyDir(System.String,System.String)">
-            <summary>
-            复制文件夹
-            </summary>
-            <param name="strFromDirectory">要复制的文件夹</param>
-            <param name="strToDirectory">复制到的文件夹</param>
-            <returns>是否复制成功</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.DeleteDir(System.String)">
-            <summary>
-            删除文件夹
-            </summary>
-            <param name="dirFullPath">要删除文件夹的全路径</param>
-            <returns>是否删除成功</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetDirFiles(System.String)">
-            <summary>
-            得到当前文件夹中所有文件列表string[]
-            </summary>
-            <param name="dirFullPath">要遍历的文件夹全路径</param>
-            <returns>string[] 文件列表</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetDirFiles(System.String,System.IO.SearchOption)">
-            <summary>
-            得到当前文件夹及下级文件夹中所有文件列表string[]
-            </summary>
-            <param name="dirFullPath">要遍历的文件夹全路径</param>
-            <param name="so">查找文件的选项，是否包含子级文件夹</param>
-            <returns>string[] 文件列表</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetDirFiles(System.String,System.String)">
-            <summary>
-            得到当前文件夹中指定文件类型［扩展名］文件列表string[]
-            </summary>
-            <param name="dirFullPath">要遍历的文件夹全路径</param>
-            <param name="searchPattern">查找文件的扩展名如“*.*代表所有文件；*.doc代表所有doc文件”</param>
-            <returns>string[] 文件列表</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetDirFiles(System.String,System.String,System.IO.SearchOption)">
-            <summary>
-            得到当前文件夹及下级文件夹中指定文件类型［扩展名］文件列表string[]
-            </summary>
-            <param name="dirFullPath">要遍历的文件夹全路径</param>
-            <param name="searchPattern">查找文件的扩展名如“*.*代表所有文件；*.doc代表所有doc文件”</param>
-            <param name="so">查找文件的选项，是否包含子级文件夹</param>
-            <returns>string[] 文件列表</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.AssertDirExist(System.String)">
-            <summary>
-            确保文件夹被创建
-            </summary>
-            <param name="filePath">文件夹全名（含路径）</param>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.IsExistDirectory(System.String)">
-            <summary>
-            检测指定目录是否存在
-            </summary>
-            <param name="directoryPath">目录的绝对路径</param>
-            <returns>bool 是否存在</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.IsEmptyDirectory(System.String)">
-            <summary>
-            检测指定目录是否为空
-            </summary>
-            <param name="directoryPath">指定目录的绝对路径</param>
-            <returns>bool 是否为空</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.ContainFile(System.String,System.String)">
-            <summary>
-            检测指定目录中是否存在指定的文件,若要搜索子目录请使用重载方法.
-            </summary>
-            <param name="directoryPath">指定目录的绝对路径</param>
-            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
-            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param>
-            <returns>bool 是否包含文件</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.ContainFile(System.String,System.String,System.Boolean)">
-            <summary>
-            检测指定目录中是否存在指定的文件
-            </summary>
-            <param name="directoryPath">指定目录的绝对路径</param>
-            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
-            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param>
-            <param name="isSearchChild">是否搜索子目录</param>
-            <returns>bool 是否包含文件</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetCurrentDirectory">
-            <summary>
-            取当前目录
-            </summary>
-            <returns>当前目录名</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.SetCurrentDirectory(System.String)">
-            <summary>
-            设当前目录
-            </summary>
-            <param name="path">目录绝对路径</param>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetInvalidPathChars">
-            <summary>
-            取路径中不充许存在的字符
-            </summary>
-            <returns>不充许存在的字符</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetAllDrives">
-            <summary>
-            取系统所有的逻辑驱动器
-            </summary>
-            <returns>所有的逻辑驱动器</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetFileNames(System.String)">
-            <summary>
-            获取指定目录中所有文件列表
-            </summary>
-            <param name="directoryPath">指定目录的绝对路径</param>
-            <returns>所有文件列表</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyDirHelper.GetFileNames(System.String,System.String,System.Boolean)">
-            <summary>
-            获取指定目录及子目录中所有文件列表
-            </summary>
-            <param name="directoryPath">指定目录的绝对路径</param>
-            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
-            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param>
-            <param name="isSearchChild">是否搜索子目录</param>
-            <returns>指定目录及子目录中所有文件列表</returns>
-        </member>
         <member name="T:MyHelper4Web.MyDataReaderHelper">
             <summary>
             DataReader帮助类
@@ -1689,316 +848,6 @@
             </summary>
             <returns>返回值</returns>
             <param name="column">列名</param>
-        </member>
-        <member name="T:MyHelper4Web.MyBase64Helper">
-            <summary>
-            Base64 编码帮助类
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyBase64Helper.#ctor">
-            <summary>
-            初始化字典
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyBase64Helper.GetStandardBase64">
-            <summary>
-            获取具有标准的Base64密码表的加密类
-            </summary>
-            <returns>Base64密码表的加密类</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyBase64Helper.Encrypt(System.String)">
-            <summary>
-            使用默认的密码表（双向哈西字典）加密字符串
-            </summary>
-            <param name="input">需要加密的字符串</param>
-            <returns>加密后的字符串</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyBase64Helper.Decrypt(System.String)">
-            <summary>
-            使用默认的密码表（双向哈西字典）解密字符串
-            </summary>
-            <param name="input">需要解密的字符串</param>
-            <returns>解密后的字符串</returns>
-        </member>
-        <member name="P:MyHelper4Web.MyBase64Helper.CodeTable">
-            <summary>
-            设置并验证密码表合法性
-            </summary>
-        </member>
-        <member name="P:MyHelper4Web.MyBase64Helper.Pad">
-            <summary>
-            设置并验证补码合法性
-            </summary>
-        </member>
-        <member name="T:MyHelper4Web.MyMouseHelper">
-            <summary>
-            模拟鼠标点击
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyMouseHelper.GetDoubleClickTime">
-            <summary>
-            连续两次鼠标单击之间会被处理成双击事件的间隔时间。
-            </summary>
-            <returns>以毫秒表示的双击时间</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMouseHelper.GetCursorPos(System.Drawing.Point)">
-            <summary>
-            检取光标的位置，以屏幕坐标表示。
-            </summary>
-            <param name="lpPoint">POINT结构指针，该结构接收光标的屏幕坐标。</param>
-            <returns>如果成功，返回值非零；如果失败，返回值为零。</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMouseHelper.SetCursorPos(System.Int32,System.Int32)">
-            <summary>
-            把光标移到屏幕的指定位置。如果新位置不在由 ClipCursor函数设置的屏幕矩形区域之内，则系统自动调整坐标，使得光标在矩形之内。
-            </summary>
-            <param name="x">指定光标的新的X坐标，以屏幕坐标表示。</param>
-            <param name="y">指定光标的新的Y坐标，以屏幕坐标表示。</param>
-            <returns>如果成功，返回非零值；如果失败，返回值是零</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMouseHelper.MouseClick">
-            <summary>
-            在当前鼠标的位置左键点击一下
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyMouseHelper.MouseClick(System.Drawing.Point)">
-            <summary>
-            移动到坐标位置点击
-            </summary>
-            <param name="location">要点击的坐标位置,屏幕绝对值</param>
-        </member>
-        <member name="M:MyHelper4Web.MyMouseHelper.MouseRightClick(System.Drawing.Point)">
-            <summary>
-            移动到坐标位置点击
-            </summary>
-            <param name="location">要点击的坐标位置,屏幕绝对值</param>
-        </member>
-        <member name="M:MyHelper4Web.MyMouseHelper.MouseMove(System.Drawing.Point)">
-            <summary>
-            移动到坐标位置
-            </summary>
-            <param name="location">要移动到的坐标位置,屏幕绝对值</param>
-        </member>
-        <member name="P:MyHelper4Web.MyMouseHelper.MousePresent">
-            <summary>
-            检查鼠标是否已经安装.
-            </summary>
-        </member>
-        <member name="P:MyHelper4Web.MyMouseHelper.WheelExists">
-            <summary>
-            检查鼠标是否存在滚轮
-            </summary>
-        </member>
-        <member name="P:MyHelper4Web.MyMouseHelper.WheelScrollLines">
-            <summary>
-            获取鼠标滚轮每次滚动的行数
-            </summary>
-        </member>
-        <member name="T:MyHelper4Web.MyMD5Helper">
-            <summary>
-            MD5 操作类
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.GetMD532(System.String)">
-            <summary>
-            获得32位的MD5加密
-            </summary>
-            <param name="input">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.GetMD516(System.String)">
-            <summary>
-            获得16位的MD5加密
-            </summary>
-            <param name="input">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.GetMD58(System.String)">
-            <summary>
-            获得8位的MD5加密
-            </summary>
-            <param name="input">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.GetMD54(System.String)">
-            <summary>
-            获得4位的MD5加密
-            </summary>
-            <param name="input">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.AddMD5Profix(System.String)">
-            <summary>
-            添加MD5的前缀，便于检查有无篡改
-            </summary>
-            <param name="input">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.RemoveMD5Profix(System.String)">
-            <summary>
-            移除MD5的前缀
-            </summary>
-            <param name="input">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.ValidateValue(System.String)">
-            <summary>
-            验证MD5前缀处理的字符串有无被篡改
-            </summary>
-            <param name="input">输入字符串</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.AddMD5(System.String)">
-            <summary>
-            对给定文件路径的文件加上标签
-            </summary>
-            <param name="path">要加密的文件的路径</param>
-            <returns>标签的值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.CheckMD5(System.String)">
-            <summary>
-            对给定路径的文件进行验证
-            </summary>
-            <param name="path">要加密的文件的路径</param>
-            <returns>是否加了标签或是否标签值与内容值一致</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyMD5Helper.MD5Buffer(System.Byte[],System.Int32,System.Int32)">
-            <summary>
-            计算文件的MD5值
-            </summary>
-            <param name="md5File">MD5签名文件字符数组</param>
-            <param name="index">计算起始位置</param>
-            <param name="count">计算终止位置</param>
-            <returns>计算结果</returns>
-        </member>
-        <member name="T:MyHelper4Web.MyFileHelper">
-            <summary>
-            文件操作类
-            </summary>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.DeleteFile(System.String)">
-            <summary>
-            删除文件
-            </summary>
-            <param name="fileFullPath">文件全路径</param>
-            <returns>bool 是否删除成功</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.GetFileName(System.String)">
-            <summary>
-            根据传来的文件全路径，获取文件名称部分默认包括扩展名
-            </summary>
-            <param name="fileFullPath">文件全路径</param>
-            <returns>string 文件名称</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.GetFileName(System.String,System.Boolean)">
-            <summary>
-            根据传来的文件全路径，获取文件名称部分
-            </summary>
-            <param name="fileFullPath">文件全路径</param>
-            <param name="includeExtension">是否包括文件扩展名</param>
-            <returns>string 文件名称</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.GetNewFileFullName(System.String)">
-            <summary>
-            根据传来的文件全路径，获取新的文件名称全路径,一般用作临时保存用
-            </summary>
-            <param name="fileFullPath">文件全路径</param>
-            <returns>string 新的文件全路径名称</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.GetFileExtension(System.String)">
-            <summary>
-            根据传来的文件全路径，获取文件扩展名不包括“.”，如“doc”
-            </summary>
-            <param name="fileFullPath">文件全路径</param>
-            <returns>string 文件扩展名</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.OpenFile(System.String)">
-            <summary>
-            根据传来的文件全路径，外部打开文件，默认用系统注册类型关联软件打开
-            </summary>
-            <param name="fileFullPath">文件全路径</param>
-            <returns>bool 文件名称</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.GetFileSize(System.String)">
-            <summary>
-            根据传来的文件全路径，得到文件大小，规范文件大小称呼，如1ＧＢ以上，单位用ＧＢ，１ＭＢ以上，单位用ＭＢ，１ＭＢ以下，单位用ＫＢ
-            </summary>
-            <param name="fileFullPath">文件全路径</param>
-            <returns>bool 文件大小</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.FileToStreamByte(System.String)">
-            <summary>
-            文件转换成二进制，返回二进制数组Byte[]
-            </summary>
-            <param name="fileFullPath">文件全路径</param>
-            <returns>byte[] 包含文件流的二进制数组</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.ByteStreamToFile(System.String,System.Byte[])">
-            <summary>
-            二进制数组Byte[]生成文件
-            </summary>
-            <param name="createFileFullPath">要生成的文件全路径</param>
-            <param name="streamByte">要生成文件的二进制 Byte 数组</param>
-            <returns>bool 是否生成成功</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.ByteStreamToFile(System.String,System.Byte[],System.Boolean)">
-            <summary>
-            二进制数组Byte[]生成文件，并验证文件是否存在，存在则先删除
-            </summary>
-            <param name="createFileFullPath">要生成的文件全路径</param>
-            <param name="streamByte">要生成文件的二进制 Byte 数组</param>
-            <param name="fileExistsDelete">同路径文件存在是否先删除</param>
-            <returns>bool 是否生成成功</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.ReadAndWriteFile(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
-            <summary>
-            读写文件，并进行匹配文字替换
-            </summary>
-            <param name="pathRead">读取路径</param>
-            <param name="pathWrite">写入路径</param>
-            <param name="replaceStrings">替换字典</param>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.ReadFile(System.String)">
-            <summary>
-            读取文件
-            </summary>
-            <param name="filePath">文件路径</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.WriteFile(System.String,System.String)">
-            <summary>
-            写入文件
-            </summary>
-            <param name="pathWrite">写入路径</param>
-            <param name="content">内容</param>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.ReadAndAppendFile(System.String,System.String)">
-            <summary>
-            读取并附加文本
-            </summary>
-            <param name="filePath">文件路径</param>
-            <param name="content">内容</param>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.CopyFile(System.String,System.String)">
-            <summary>
-            复制文件
-            </summary>
-            <param name="sources">源文件</param>
-            <param name="dest">目标文件</param>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.MoveFile(System.String,System.String)">
-            <summary>
-            复制文件
-            </summary>
-            <param name="sources">源文件</param>
-            <param name="dest">目标文件</param>
-        </member>
-        <member name="M:MyHelper4Web.MyFileHelper.IsExistFile(System.String)">
-            <summary>
-            检测指定文件是否存在,如果存在则返回true。
-            </summary>
-            <param name="filePath">文件的绝对路径</param>
-            <returns>bool 是否存在文件</returns>
         </member>
         <member name="T:MyHelper4Web.MyConvertHelper">
             <summary>
@@ -2271,6 +1120,1164 @@
             全角空格为12288，半角空格为32
             其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248
              </remarks>
+        </member>
+        <member name="T:MyHelper4Web.MyStringHelper">
+            <summary>
+            字符串操作类
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.IsEmpty(System.String)">
+            <summary>
+            检查字符串是否为空
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.CheckValidity(System.String)">
+            <summary>
+            检查字符串中是否包含非法字符
+            </summary>
+            <param name="s">单字符</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.TransformPrice(System.Double)">
+            <summary>
+            把价格精确至小数点两位
+            </summary>
+            <param name="dPrice">价格</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GetLength(System.String)">
+            <summary> 
+            检测含有中文字符串的实际长度 
+            </summary> 
+            <param name="str">字符串</param> 
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GetLetter(System.String,System.Int32,System.Boolean)">
+            <summary>
+            截取长度,num是英文字母的总数，一个中文算两个英文
+            </summary>
+            <param name="str">字符串</param>
+            <param name="iNum">英文字母的总数</param>
+            <param name="bAddDot">是否计算标点</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GetDateString(System.DateTime)">
+            <summary>
+            获取日期字符串
+            </summary>
+            <param name="dt">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GetStrByLast(System.String,System.String)">
+            <summary>
+            根据指定字符，截取相应字符串
+            </summary>
+            <param name="sOrg">源字符串</param>
+            <param name="sLast">指定字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GetPreStrByLast(System.String,System.String)">
+            <summary>
+            根据指定字符，截取相应字符串
+            </summary>
+            <param name="sOrg">源字符串</param>
+            <param name="sLast">指定字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.RemoveEndWith(System.String,System.String)">
+            <summary>
+            根据指定字符，截取相应字符串
+            </summary>
+            <param name="sOrg">源字符串</param>
+            <param name="sEnd">终止字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.ClearTag(System.String)">
+            <summary>
+            清除HTML标记
+            </summary>
+            <param name="sHtml">HTML标记</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.ClearTag(System.String,System.String)">
+            <summary>
+            根据正则清除HTML标记
+            </summary>
+            <param name="sHtml">HTML标记</param>
+            <param name="sRegex">正则</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.ConvertToJS(System.String)">
+            <summary>
+            转化成JS
+            </summary>
+            <param name="sHtml">HTML标记</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.ReplaceNbsp(System.String)">
+            <summary>
+            替换空格
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.StringToHtml(System.String)">
+            <summary>
+            字符串转HTML
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.AcquireAssignString(System.String,System.Int32)">
+            <summary>
+            截取长度并转换为HTML
+            </summary>
+            <param name="str">字符串</param>
+            <param name="num">长度</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.TranslateToHtmlString(System.String,System.Int32)">
+            <summary>
+            此方法与AcquireAssignString的功能已经一样，为了不报错，故保留此方法
+            </summary>
+            <param name="str">字符串</param>
+            <param name="num">长度</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.DelHtmlString(System.String)">
+            <summary>
+            删除所有的html标记 
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.DelTag(System.String,System.String,System.Boolean)">
+            <summary>
+            删除字符串中的特定标记 
+            </summary>
+            <param name="str">字符串</param>
+            <param name="tag">标签</param>
+            <param name="isContent">是否清除内容 </param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.DelTagArray(System.String,System.String,System.Boolean)">
+            <summary>
+            删除字符串中的一组标记 
+            </summary>
+            <param name="str">字符串</param>
+            <param name="tagA">标签</param>
+            <param name="isContent">是否清除内容 </param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.SetVersionFormat(System.String)">
+            <summary>
+            格式化为版本号字符串
+            </summary>
+            <param name="sVersion">版本号</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.AddZero(System.Int32,System.Int32)">
+            <summary>
+            在前面补0
+            </summary>
+            <param name="sheep">数字</param>
+            <param name="length">补0长度</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.AddZero(System.String,System.Int32)">
+            <summary>
+            在前面补0
+            </summary>
+            <param name="sheep">数字</param>
+            <param name="length">补0长度</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GetUniqueString">
+            <summary>
+            简介：获得唯一的字符串
+            </summary>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GetCleanJsString(System.String)">
+            <summary>
+            获得干净,无非法字符的字符串
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GetCleanJsString2(System.String)">
+            <summary>
+            获得干净,无非法字符的字符串
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.StringToUnicode(System.String)">
+            <summary>
+            将原始字串转换为unicode,格式为\u.\u.
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.UnicodeToString(System.String)">
+            <summary>
+            将Unicode字串\u.\u.格式字串转换为原始字符串
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GB2Unicode(System.String)">
+            <summary>
+            GB2312转换成unicode编码 
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.GetByte(System.Char)">
+            <summary>
+            得到单个字符的值
+            </summary>
+            <param name="ch"></param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.ConvertSingle(System.String)">
+            <summary>
+            转换一个字符，输入如"Π"中的"03a0"
+            </summary>
+            <param name="unicodeSingle">unicode字符</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.UtoGB(System.String)">
+            <summary>
+            unicode编码转换成GB2312汉字 
+            </summary>
+            <param name="str">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyStringHelper.Convert2Hex(System.String)">
+            <summary>
+            字符串转成Hex
+            </summary>
+            <param name="pstr">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="T:MyHelper4Web.MyDateTimeHelper">
+            <summary>
+            时间操作类
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetTheDay(System.Nullable{System.Int32},System.DateTime)">
+            <summary>
+            哪天
+            </summary>
+            <param name="days">7天前:-7 7天后:+7</param>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetSunday(System.Nullable{System.Int32},System.DateTime)">
+            <summary>
+            周日
+            </summary>
+            <param name="weeks">上周-1 下周+1 本周0</param>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetSaturday(System.Nullable{System.Int32},System.DateTime)">
+            <summary>
+            周六
+            </summary>
+            <param name="weeks">上周-1 下周+1 本周0</param>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetFirstDayOfMonth(System.Nullable{System.Int32},System.DateTime)">
+            <summary>
+            月第一天
+            </summary>
+            <param name="months">上月-1 本月0 下月1</param>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetLastDayOfMonth(System.Nullable{System.Int32},System.DateTime)">
+            <summary>
+            月最后一天
+            </summary>
+            <param name="months">上月0 本月1 下月2</param>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetFirstDayOfYear(System.DateTime)">
+            <summary>
+            年度第一天
+            </summary>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetLastDayOfYear(System.DateTime)">
+            <summary>
+            年度最后一天
+            </summary>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetFirstDayOfQuarter(System.Nullable{System.Int32},System.DateTime)">
+            <summary>
+            季度第一天
+            </summary>
+            <param name="quarters">上季度-1 下季度+1</param>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetLastDayOfQuarter(System.Nullable{System.Int32},System.DateTime)">
+            <summary>
+            季度最后一天
+            </summary>
+            <param name="quarters">上季度0 本季度1 下季度2</param>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetDayOfWeekCN(System.DateTime)">
+            <summary>
+            中文星期
+            </summary>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetDayOfWeekNum(System.DateTime)">
+            <summary>
+            获取星期数字形式,周一开始
+            </summary>
+            <param name="dateTime">日期时间</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetWeekofyear(System.DateTime)">
+            <summary> 
+            取指定日期是一年中的第几周 
+            </summary> 
+            <param name="dtime">日期时间</param> 
+            <returns>数字 一年中的第几周</returns> 
+        </member>
+        <member name="M:MyHelper4Web.MyDateTimeHelper.GetDayofmonth(System.DateTime)">
+            <summary> 
+            取指定日期是一月中的第几天 
+            </summary> 
+            <param name="dtime">日期时间</param> 
+            <returns>数字 一月中的第几天</returns> 
+        </member>
+        <member name="T:MyHelper4Web.MyEnumHelper">
+            <summary>
+            枚举操作类
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.GetDescription(System.Type,System.Object)">
+            <summary>
+            返回指定枚举类型的指定值的描述
+            </summary>
+            <param name="t">枚举类型</param>
+            <param name="v">枚举值</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.GetStatus(System.Type)">
+            <summary>
+            返回指定枚举类型的所有枚举项
+            </summary>
+            <param name="t">枚举类型</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.GetInstance``1(System.String)">
+            <summary>
+            通过字符串获取枚举成员实例
+            </summary>
+            <typeparam name="T">枚举名,比如Enum1</typeparam>
+            <param name="member">枚举成员的常量名或常量值,
+            范例:Enum1枚举有两个成员A=0,B=1,则传入"A"或"0"获取 Enum1.A 枚举类型</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberKeyValue``1">
+            <summary>
+            获取枚举成员名称和成员值的键值对集合
+            </summary>
+            <typeparam name="T">枚举名,比如Enum1</typeparam>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberNames``1">
+            <summary>
+            获取枚举所有成员名称
+            </summary>
+            <typeparam name="T">枚举名,比如Enum1</typeparam>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberName``1(System.Object)">
+            <summary>
+            获取枚举成员的名称
+            </summary>
+            <typeparam name="T">枚举名,比如Enum1</typeparam>
+            <param name="member">枚举成员实例或成员值,
+            范例:Enum1枚举有两个成员A=0,B=1,则传入Enum1.A或0,获取成员名称"A"</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberValues``1">
+            <summary>
+            获取枚举所有成员值
+            </summary>
+            <typeparam name="T">枚举名,比如Enum1</typeparam>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.GetMemberValue``1(System.String)">
+            <summary>
+            获取枚举成员的值
+            </summary>
+            <typeparam name="T">枚举名,比如Enum1</typeparam>
+            <param name="memberName">枚举成员的常量名,
+            范例:Enum1枚举有两个成员A=0,B=1,则传入"A"获取0</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.GetUnderlyingType(System.Type)">
+            <summary>
+            获取枚举的基础类型
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyEnumHelper.IsDefined``1(System.String)">
+            <summary>
+            检测枚举是否包含指定成员
+            </summary>
+            <typeparam name="T">枚举名,比如Enum1</typeparam>
+            <param name="member">枚举成员名或成员值</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="T:MyHelper4Web.MyKeyboardHelper">
+            <summary>
+            提供访问键盘当前状态的属性，
+            如什么键当前按下，提供了一种方法，以发送击键到活动窗口。
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyKeyboardHelper.SendKeys(System.String)">
+            <summary>发送一个或多个击键到活动窗口，如果在键盘上输入。</summary>
+            <param name="keys">一个字符串，定义发送键。</param>
+        </member>
+        <member name="M:MyHelper4Web.MyKeyboardHelper.SendKeys(System.String,System.Boolean)">
+            <summary>发送一个或多个击键到活动窗口，如果在键盘上输入。</summary>
+            <param name="keys">一个字符串，定义发送键。</param>
+            <param name="wait">可选的。一个布尔值，指定是否等待的应用程序继续之前得到处理的击键。默认为true。</param>
+            <filterpriority>1</filterpriority>
+            <PermissionSet><IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" /><IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" /><IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" /></PermissionSet>
+        </member>
+        <member name="P:MyHelper4Web.MyKeyboardHelper.AltKeyDown">
+            <summary>获取一个布尔值，表示如果ALT键是向下。</summary>
+            <returns>一个布尔值：如果ALT键，否则为false。</returns>
+        </member>
+        <member name="P:MyHelper4Web.MyKeyboardHelper.CapsLock">
+            <summary>获取一个布尔值，指示，如果已开启CAPS LOCK键。 </summary>
+            <returns>一个布尔值：如果已开启CAPS LOCK键，则为true，否则为false。</returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:MyHelper4Web.MyKeyboardHelper.CtrlKeyDown">
+            <summary>获取一个布尔值，表示如果CTRL键是向下。</summary>
+            <returns>一个布尔值。真正如果CTRL键，否则为false。</returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:MyHelper4Web.MyKeyboardHelper.NumLock">
+            <summary>获取一个布尔值，表示如果NUM LOCK键是。</summary>
+            <returns>一个布尔值。true，如果数字锁定，否则为false。</returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:MyHelper4Web.MyKeyboardHelper.ScrollLock">
+            <summary>获取一个布尔值，指示是否SCROLL LOCK键是。 </summary>
+            <returns>一个布尔值。True如果滚动锁被，否则为false。</returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:MyHelper4Web.MyKeyboardHelper.ShiftKeyDown">
+            <summary>获取一个布尔值，表示如果SHIFT键是向下。</summary>
+            <returns>一个布尔值。真正如果SHIFT键是向下，否则为false。</returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="T:MyHelper4Web.NativeMethodsTemp">
+            <summary>
+            从 .Net 2.0 的 System.Windows.Forms.Dll 库提取
+            版权所有：微软公司
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.UnsafeNativeMethods.GetKeyState(System.Int32)">
+            <summary>
+            retrieves the status of the specified virtual key
+            </summary>
+            <param name="keyCode">Specifies a virtual key</param>
+            <returns>
+            The return value specifies the status of the specified virtual key, as follows: 
+             If the high-order bit is 1, the key is down; otherwise, it is up.
+             If the low-order bit is 1, the key is toggled. A key, such as the CAPS LOCK key, 
+             is toggled if it is turned on. The key is off and untoggled if the low-order bit is 0.
+             A toggle key's indicator light (if any) on the keyboard will be on when the key is
+             toggled, and off when the key is untoggled.
+            </returns>
+        </member>
+        <member name="T:MyHelper4Web.MyDataTableHelper`1">
+            <summary>
+            DataTable帮助类
+            </summary>
+            <typeparam name="T">泛类</typeparam>
+        </member>
+        <member name="M:MyHelper4Web.MyDataTableHelper`1.GetInnerDataTable(System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            连接两个具有相同数据结构的DataTable,返回DataTable
+            </summary>
+            <param name="table1">表1</param>
+            <param name="table2">表2</param>
+            <returns>返回表</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDataTableHelper`1.WriteDataSetToXml(System.Data.DataSet,System.String)">
+            <summary>
+            将数据集写入xml文件
+            </summary>
+            <param name="dataset">数据集</param>
+            <param name="filename">XML文件名</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDataTableHelper`1.GetSelectDataTable(System.Data.DataTable,System.String)">
+            <summary>
+            查询DataTable中的数据
+            </summary>
+            <param name="table">要查询的datatable</param>
+            <param name="comText">查询条件</param>
+            <returns>数据列集合</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDataTableHelper`1.ToDataTable(System.Collections.Generic.List{`0})">
+            <summary>
+            实体数组转DataTable
+            </summary>
+            <typeparam name="T">泛类型</typeparam>
+            <param name="entitys">泛类对象</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDataTableHelper`1.DtToList(System.Data.DataTable)">
+            <summary>
+            DataTable转实体数组
+            </summary>
+            <param name="dt">数据表</param>
+            <returns>泛类列表</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDataTableHelper`1.EnumToDataTable(System.Type,System.String,System.String)">
+            <summary>
+            枚举转DataTable
+            </summary>
+            <param name="enumType">类型</param>
+            <param name="key">索引</param>
+            <param name="val">值</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDataTableHelper`1.CreateTable(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据nameList里面的字段创建一个表格,返回该表格的DataTable
+            </summary>
+            <param name="nameList">包含字段信息的列表</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDataTableHelper`1.CreateTable(System.String)">
+            <summary>
+            通过字符列表创建表字段，字段格式可以是：
+            1) a,b,c,d,e
+            2) a|int,b|string,c|bool,d|decimal
+            </summary>
+            <param name="nameString">表名</param>
+            <returns>数据表</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDataTableHelper`1.SortedTable(System.Data.DataTable,System.String[])">
+            <summary>
+            排序表的视图
+            </summary>
+            <param name="dt">数据表</param>
+            <param name="sorts">排序字段</param>
+            <returns>排序后的表</returns>
+        </member>
+        <member name="P:MyHelper4Web.MyDataTableHelper`1.ExceptionMessage">
+            <summary>
+            设置或取得异常信息
+            </summary>
+        </member>
+        <member name="T:MyHelper4Web.MyBase64Helper">
+            <summary>
+            Base64 编码帮助类
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyBase64Helper.#ctor">
+            <summary>
+            初始化字典
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyBase64Helper.GetStandardBase64">
+            <summary>
+            获取具有标准的Base64密码表的加密类
+            </summary>
+            <returns>Base64密码表的加密类</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyBase64Helper.Encrypt(System.String)">
+            <summary>
+            使用默认的密码表（双向哈西字典）加密字符串
+            </summary>
+            <param name="input">需要加密的字符串</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyBase64Helper.Decrypt(System.String)">
+            <summary>
+            使用默认的密码表（双向哈西字典）解密字符串
+            </summary>
+            <param name="input">需要解密的字符串</param>
+            <returns>解密后的字符串</returns>
+        </member>
+        <member name="P:MyHelper4Web.MyBase64Helper.CodeTable">
+            <summary>
+            设置并验证密码表合法性
+            </summary>
+        </member>
+        <member name="P:MyHelper4Web.MyBase64Helper.Pad">
+            <summary>
+            设置并验证补码合法性
+            </summary>
+        </member>
+        <member name="T:MyHelper4Web.MyMouseHelper">
+            <summary>
+            模拟鼠标点击
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyMouseHelper.GetDoubleClickTime">
+            <summary>
+            连续两次鼠标单击之间会被处理成双击事件的间隔时间。
+            </summary>
+            <returns>以毫秒表示的双击时间</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyMouseHelper.GetCursorPos(System.Drawing.Point)">
+            <summary>
+            检取光标的位置，以屏幕坐标表示。
+            </summary>
+            <param name="lpPoint">POINT结构指针，该结构接收光标的屏幕坐标。</param>
+            <returns>如果成功，返回值非零；如果失败，返回值为零。</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyMouseHelper.SetCursorPos(System.Int32,System.Int32)">
+            <summary>
+            把光标移到屏幕的指定位置。如果新位置不在由 ClipCursor函数设置的屏幕矩形区域之内，则系统自动调整坐标，使得光标在矩形之内。
+            </summary>
+            <param name="x">指定光标的新的X坐标，以屏幕坐标表示。</param>
+            <param name="y">指定光标的新的Y坐标，以屏幕坐标表示。</param>
+            <returns>如果成功，返回非零值；如果失败，返回值是零</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyMouseHelper.MouseClick">
+            <summary>
+            在当前鼠标的位置左键点击一下
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyMouseHelper.MouseClick(System.Drawing.Point)">
+            <summary>
+            移动到坐标位置点击
+            </summary>
+            <param name="location">要点击的坐标位置,屏幕绝对值</param>
+        </member>
+        <member name="M:MyHelper4Web.MyMouseHelper.MouseRightClick(System.Drawing.Point)">
+            <summary>
+            移动到坐标位置点击
+            </summary>
+            <param name="location">要点击的坐标位置,屏幕绝对值</param>
+        </member>
+        <member name="M:MyHelper4Web.MyMouseHelper.MouseMove(System.Drawing.Point)">
+            <summary>
+            移动到坐标位置
+            </summary>
+            <param name="location">要移动到的坐标位置,屏幕绝对值</param>
+        </member>
+        <member name="P:MyHelper4Web.MyMouseHelper.MousePresent">
+            <summary>
+            检查鼠标是否已经安装.
+            </summary>
+        </member>
+        <member name="P:MyHelper4Web.MyMouseHelper.WheelExists">
+            <summary>
+            检查鼠标是否存在滚轮
+            </summary>
+        </member>
+        <member name="P:MyHelper4Web.MyMouseHelper.WheelScrollLines">
+            <summary>
+            获取鼠标滚轮每次滚动的行数
+            </summary>
+        </member>
+        <member name="T:MyHelper4Web.MyDirHelper">
+            <summary>
+            文件夹有关的操作类
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetDirs(System.String)">
+            <summary>
+            获取指定目录中所有子目录列表,若要搜索嵌套的子目录列表,请使用重载方法.
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.CreateDir(System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="destDirectory">指定目录的绝对路径</param>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.CopyDir(System.String,System.String)">
+            <summary>
+            复制文件夹
+            </summary>
+            <param name="strFromDirectory">要复制的文件夹</param>
+            <param name="strToDirectory">复制到的文件夹</param>
+            <returns>是否复制成功</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.DeleteDir(System.String)">
+            <summary>
+            删除文件夹
+            </summary>
+            <param name="dirFullPath">要删除文件夹的全路径</param>
+            <returns>是否删除成功</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetDirFiles(System.String)">
+            <summary>
+            得到当前文件夹中所有文件列表string[]
+            </summary>
+            <param name="dirFullPath">要遍历的文件夹全路径</param>
+            <returns>string[] 文件列表</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetDirFiles(System.String,System.IO.SearchOption)">
+            <summary>
+            得到当前文件夹及下级文件夹中所有文件列表string[]
+            </summary>
+            <param name="dirFullPath">要遍历的文件夹全路径</param>
+            <param name="so">查找文件的选项，是否包含子级文件夹</param>
+            <returns>string[] 文件列表</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetDirFiles(System.String,System.String)">
+            <summary>
+            得到当前文件夹中指定文件类型［扩展名］文件列表string[]
+            </summary>
+            <param name="dirFullPath">要遍历的文件夹全路径</param>
+            <param name="searchPattern">查找文件的扩展名如“*.*代表所有文件；*.doc代表所有doc文件”</param>
+            <returns>string[] 文件列表</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetDirFiles(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            得到当前文件夹及下级文件夹中指定文件类型［扩展名］文件列表string[]
+            </summary>
+            <param name="dirFullPath">要遍历的文件夹全路径</param>
+            <param name="searchPattern">查找文件的扩展名如“*.*代表所有文件；*.doc代表所有doc文件”</param>
+            <param name="so">查找文件的选项，是否包含子级文件夹</param>
+            <returns>string[] 文件列表</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.AssertDirExist(System.String)">
+            <summary>
+            确保文件夹被创建
+            </summary>
+            <param name="filePath">文件夹全名（含路径）</param>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.IsExistDirectory(System.String)">
+            <summary>
+            检测指定目录是否存在
+            </summary>
+            <param name="directoryPath">目录的绝对路径</param>
+            <returns>bool 是否存在</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.IsEmptyDirectory(System.String)">
+            <summary>
+            检测指定目录是否为空
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <returns>bool 是否为空</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.ContainFile(System.String,System.String)">
+            <summary>
+            检测指定目录中是否存在指定的文件,若要搜索子目录请使用重载方法.
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
+            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param>
+            <returns>bool 是否包含文件</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.ContainFile(System.String,System.String,System.Boolean)">
+            <summary>
+            检测指定目录中是否存在指定的文件
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
+            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param>
+            <param name="isSearchChild">是否搜索子目录</param>
+            <returns>bool 是否包含文件</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetCurrentDirectory">
+            <summary>
+            取当前目录
+            </summary>
+            <returns>当前目录名</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.SetCurrentDirectory(System.String)">
+            <summary>
+            设当前目录
+            </summary>
+            <param name="path">目录绝对路径</param>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetInvalidPathChars">
+            <summary>
+            取路径中不充许存在的字符
+            </summary>
+            <returns>不充许存在的字符</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetAllDrives">
+            <summary>
+            取系统所有的逻辑驱动器
+            </summary>
+            <returns>所有的逻辑驱动器</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetFileNames(System.String)">
+            <summary>
+            获取指定目录中所有文件列表
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <returns>所有文件列表</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyDirHelper.GetFileNames(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定目录及子目录中所有文件列表
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
+            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param>
+            <param name="isSearchChild">是否搜索子目录</param>
+            <returns>指定目录及子目录中所有文件列表</returns>
+        </member>
+        <member name="T:MyHelper4Web.MyValidateHelper">
+            <summary>
+            常用验证操作类
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.GetStringLength(System.String)">
+            <summary>
+            返回字符串真实长度, 1个汉字长度为2
+            </summary>
+            <param name="stringValue">字符串</param>
+            <returns>字符长度</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidUserName(System.String)">
+            <summary>
+            检测用户名格式是否有效
+            </summary>
+            <param name="userName">用户名</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidPassword(System.String)">
+            <summary>
+            密码有效性
+            </summary>
+            <param name="password">密码</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidInt(System.String)">
+            <summary>
+            int有效性
+            </summary>
+            <param name="val">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsNumber(System.String)">
+            <summary>
+            是否数字字符串
+            </summary>
+            <param name="inputData">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsNumberSign(System.String)">
+            <summary>
+            是否数字字符串 可带正负号
+            </summary>
+            <param name="inputData">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsDecimal(System.String)">
+            <summary>
+            是否是浮点数
+            </summary>
+            <param name="inputData">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsDecimalSign(System.String)">
+            <summary>
+            是否是浮点数 可带正负号
+            </summary>
+            <param name="inputData">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsHasCHZN(System.String)">
+            <summary>
+            检测是否有中文字符
+            </summary>
+            <param name="inputData">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.GetCHZNLength(System.String)">
+            <summary> 
+            检测含有中文字符串的实际长度 
+            </summary>
+            <param name="inputData">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsIdCard(System.String)">
+            <summary>
+            验证身份证是否合法  15 和  18位两种
+            </summary>
+            <param name="idCard">要验证的身份证</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsEmail(System.String)">
+            <summary>
+            是否是邮件地址
+            </summary>
+            <param name="inputData">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidZip(System.String)">
+            <summary>
+            邮编有效性
+            </summary>
+            <param name="zip">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidPhone(System.String)">
+            <summary>
+            固定电话有效性
+            </summary>
+            <param name="phone">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidMobile(System.String)">
+            <summary>
+            手机有效性
+            </summary>
+            <param name="mobile">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidPhoneAndMobile(System.String)">
+            <summary>
+            电话有效性（固话和手机 ）
+            </summary>
+            <param name="number">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidURL(System.String)">
+            <summary>
+            Url有效性
+            </summary>
+            <param name="url">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidIP(System.String)">
+            <summary>
+            IP有效性
+            </summary>
+            <param name="ip">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsValidDomain(System.String)">
+            <summary>
+            domain 有效性
+            </summary>
+            <param name="host">域名</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsBase64String(System.String)">
+            <summary>
+            判断是否为base64字符串
+            </summary>
+            <param name="str">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsGuid(System.String)">
+            <summary>
+            验证字符串是否是GUID
+            </summary>
+            <param name="guid">字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsDate(System.String)">
+            <summary>
+            判断输入的字符是否为日期
+            </summary>
+            <param name="strValue">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.IsDateHourMinute(System.String)">
+            <summary>
+            判断输入的字符是否为日期,如2004-07-12 14:25|||1900-01-01 00:00|||9999-12-31 23:59
+            </summary>
+            <param name="strValue">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.CheckMathLength(System.String,System.Int32)">
+            <summary>
+            检查字符串最大长度，返回指定长度的串
+            </summary>
+            <param name="inputData">输入字符串</param>
+            <param name="maxLength">最大长度</param>
+            <returns>返回值</returns>			
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.Encode(System.String)">
+            <summary>
+            转换成 HTML code
+            </summary>
+            <param name="str">输入字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyValidateHelper.Decode(System.String)">
+             <summary>
+            解析html成 普通文本
+             </summary>
+             <param name="str">输入字符串</param>
+             <returns>返回值</returns>
+        </member>
+        <member name="T:MyHelper4Web.MyExcelHelper">
+            <summary>
+            Excel 操作类
+            </summary>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelConnectstring(System.String,System.Boolean,MyHelper4Web.MyExcelHelper.ExcelType)">
+            <summary>
+            返回Excel 连接字符串   [IMEX=1]
+            </summary>
+            <param name="excelPath">Excel文件 绝对路径</param>
+            <param name="header">是否把第一行作为列名</param>
+            <param name="eType">Excel 版本 </param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelConnectstring(System.String,System.Boolean,MyHelper4Web.MyExcelHelper.ExcelType,MyHelper4Web.MyExcelHelper.IMEXType)">
+            <summary>
+            返回Excel 连接字符串
+            </summary>
+            <param name="excelPath">Excel文件 绝对路径</param>
+            <param name="header">是否把第一行作为列名</param>
+            <param name="eType">Excel 版本 </param>
+            <param name="imex">IMEX模式</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelTablesName(System.String,MyHelper4Web.MyExcelHelper.ExcelType)">
+            <summary>
+            返回Excel工作表名
+            </summary>
+            <param name="excelPath">Excel文件 绝对路径</param>
+            <param name="eType">Excel 版本 </param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelTablesName(System.String)">
+            <summary>
+            返回Excel工作表名
+            </summary>
+            <param name="connectstring">excel连接字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelTablesName(System.Data.OleDb.OleDbConnection)">
+            <summary>
+            返回Excel工作表名
+            </summary>
+            <param name="connection">excel连接</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelFirstTableName(System.String,MyHelper4Web.MyExcelHelper.ExcelType)">
+            <summary>
+            返回Excel第一个工作表表名
+            </summary>
+            <param name="excelPath">Excel文件 绝对路径</param>
+            <param name="eType">Excel 版本 </param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelFirstTableName(System.String)">
+            <summary>
+            返回Excel第一个工作表表名
+            </summary>
+            <param name="connectstring">excel连接字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.GetExcelFirstTableName(System.Data.OleDb.OleDbConnection)">
+            <summary>
+            返回Excel第一个工作表表名
+            </summary>
+            <param name="connection">excel连接</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.GetColumnsList(System.String,MyHelper4Web.MyExcelHelper.ExcelType,System.String)">
+            <summary>
+            获取Excel文件中指定工作表的列
+            </summary>
+            <param name="excelPath">Excel文件 绝对路径</param>
+            <param name="eType">ExcelType</param>
+            <param name="table">名称 excel table  例如：Sheet1$</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.ExcelToDataSet(System.String,System.String,System.Boolean,MyHelper4Web.MyExcelHelper.ExcelType)">
+            <summary>
+            EXCEL导入DataSet
+            </summary>
+            <param name="excelPath">Excel文件 绝对路径</param>
+            <param name="table">名称 excel table  例如：Sheet1$ </param>
+            <param name="header">是否把第一行作为列名</param>
+            <param name="eType">Excel 版本 </param>
+            <returns>返回Excel相应工作表中的数据 DataSet   [table不存在时返回空的DataSet]</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.IsExistExcelTableName(System.Data.OleDb.OleDbConnection,System.String)">
+            <summary>
+            判断工作表名是否存在
+            </summary>
+            <param name="connection">excel连接</param>
+            <param name="table">名称 excel table  例如：Sheet1$</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.ExcelToDataSet(System.String,System.String)">
+            <summary>
+            EXCEL导入DataSet
+            </summary>
+            <param name="connectstring">excel连接字符串</param>
+            <param name="table">名称 excel table  例如：Sheet1$ </param>
+            <returns>返回Excel相应工作表中的数据 DataSet   [table不存在时返回空的DataSet]</returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.ExcelToDataSet(System.String,System.Boolean,MyHelper4Web.MyExcelHelper.ExcelType)">
+            <summary>
+            EXCEL所有工作表导入DataSet
+            </summary>
+            <param name="excelPath">Excel文件 绝对路径</param>
+            <param name="header">是否把第一行作为列名</param>
+            <param name="eType">Excel 版本 </param>
+            <returns>返回Excel第一个工作表中的数据 DataSet </returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.ExcelToDataSet(System.String)">
+            <summary>
+            EXCEL所有工作表导入DataSet
+            </summary>
+            <param name="connectstring">excel连接字符串</param>
+            <returns>返回Excel第一个工作表中的数据 DataSet </returns>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.DataSetToExcel(System.Data.DataSet,System.String)">
+            <summary>
+            把一个数据集中的数据导出到Excel文件中(XML格式操作)
+            </summary>
+            <param name="source">DataSet数据</param>
+            <param name="fileName">保存的Excel文件名</param>
+        </member>
+        <member name="M:MyHelper4Web.MyExcelHelper.DataSetToExcel(System.Data.DataTable,System.String)">
+            <summary>
+            将DataTable导出为Excel(OleDb 方式操作）
+            </summary>
+            <param name="dataTable">表</param>
+            <param name="fileName">导出默认文件名</param>
+        </member>
+        <member name="T:MyHelper4Web.MyExcelHelper.ExcelType">
+            <summary>
+            Excel 版本
+            </summary>
+        </member>
+        <member name="T:MyHelper4Web.MyExcelHelper.IMEXType">
+            <summary>
+            IMEX 三种模式。
+            IMEX是用来告诉驱动程序使用Excel文件的模式，其值有0、1、2三种，分别代表导出、导入、混合模式。
+            </summary>
         </member>
         <member name="T:MyHelper4Web.MyAppConfigHelper">
             <summary>

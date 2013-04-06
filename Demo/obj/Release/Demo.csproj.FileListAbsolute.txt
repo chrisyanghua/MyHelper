@@ -13,3 +13,4 @@ D:\Projects\MyHelper\Demo\obj\Release\ResolveAssemblyReference.cache
 D:\Projects\MyHelper\Demo\obj\Release\Demo.dll
 D:\Projects\MyHelper\Demo\obj\Release\Demo.pdb
 D:\Projects\MyHelper\Demo\bin\MyHelper4Web.xml
+E:\WebSite\Project\MyHelper\Demo\bin\MyHelper4Web.xml
